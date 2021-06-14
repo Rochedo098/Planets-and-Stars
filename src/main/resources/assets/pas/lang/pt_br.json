@@ -1,0 +1,14 @@
+{
+  "item.planetsandstars.copper_ingot": "Lingote de Cobre",
+  "item.planetsandstars.tin_ingot": "Lingote de Estanho",
+  "item.planetsandstars.lead_ingot": "Lingote de Chumbo",
+  "item.planetsandstars.silver_ingot": "Lingote de Prata",
+  "item.planetsandstars.steel_ingot": "Lingote de Aco",
+  "item.planetsandstars.silicon": "Silicio",
+
+  "item.planetsandstars.basic_circuit": "Circuito Basico",
+  "item.planetsandstars.advanced_circuit": "Circuito Avancado",
+  "item.planetsandstars.industrial_circuit": "Circuito Industrial",
+
+  "block.planetsandstars.copper_ore": "Minerio de Cobre"
+}
