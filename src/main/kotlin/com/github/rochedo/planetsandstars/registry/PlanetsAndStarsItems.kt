@@ -7,7 +7,6 @@ import net.minecraft.util.registry.Registry
 
 object PlanetsAndStarsItems {
     // Resources
-    val COPPER_INGOT: Item = Item(PasItemSettings())
     val TIN_INGOT: Item = Item(PasItemSettings())
     val LEAD_INGOT: Item = Item(PasItemSettings())
     val SILVER_INGOT: Item = Item(PasItemSettings())
@@ -28,7 +27,6 @@ object PlanetsAndStarsItems {
     val INDUSTRIAL_BATTERY: Item = Item(PasItemSettings())
 
     fun register() {
-        Registry.register(Registry.ITEM, MyIdentifier("copper_ingot"), COPPER_INGOT)
         Registry.register(Registry.ITEM, MyIdentifier("tin_ingot"), TIN_INGOT)
         Registry.register(Registry.ITEM, MyIdentifier("lead_ingot"), LEAD_INGOT)
         Registry.register(Registry.ITEM, MyIdentifier("silver_ingot"), SILVER_INGOT)

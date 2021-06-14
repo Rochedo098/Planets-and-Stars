@@ -26,14 +26,12 @@ object PlanetsAndStarsBlocks {
     val NEPTUNE_ROCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
 
     // Blocks
-    val COPPER_BLOCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
     val TIN_BLOCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
     val LEAD_BLOCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
     val SILVER_BLOCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
     val STEEL_BLOCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
 
     // Ores
-    val COPPER_ORE: Block = Block(PasOreSetings(4.0f, 3))
     val TIN_ORE: Block = Block(PasOreSetings(4.0f, 3))
     val LEAD_ORE: Block = Block(PasOreSetings(4.0f, 3))
     val SILVER_ORE: Block = Block(PasOreSetings(4.0f, 3))
@@ -69,9 +67,6 @@ object PlanetsAndStarsBlocks {
         Registry.register(Registry.ITEM,  MyIdentifier("neptune_rock"), BlockItem(NEPTUNE_ROCK, PasItemSettings()))
 
         // Ores
-        Registry.register(Registry.BLOCK, MyIdentifier("copper_ore"), COPPER_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("copper_ore"), BlockItem(COPPER_ORE, PasItemSettings()))
-
         Registry.register(Registry.BLOCK, MyIdentifier("tin_ore"), TIN_ORE)
         Registry.register(Registry.ITEM,  MyIdentifier("tin_ore"), BlockItem(TIN_ORE, PasItemSettings()))
 
@@ -82,9 +77,6 @@ object PlanetsAndStarsBlocks {
         Registry.register(Registry.ITEM,  MyIdentifier("silver_ore"), BlockItem(SILVER_ORE, PasItemSettings()))
 
         // Blocks
-        Registry.register(Registry.BLOCK, MyIdentifier("copper_block"), COPPER_BLOCK)
-        Registry.register(Registry.ITEM,  MyIdentifier("copper_block"), BlockItem(COPPER_BLOCK, PasItemSettings()))
-
         Registry.register(Registry.BLOCK, MyIdentifier("tin_block"), TIN_BLOCK)
         Registry.register(Registry.ITEM,  MyIdentifier("tin_block"), BlockItem(TIN_BLOCK, PasItemSettings()))
 
