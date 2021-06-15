@@ -26,6 +26,9 @@ object PlanetsAndStarsItems {
     val ADVANCED_BATTERY: Item = Item(PasItemSettings())
     val INDUSTRIAL_BATTERY: Item = Item(PasItemSettings())
 
+    // Guide
+    val GUIDE: Item = Item(PasItemSettings())
+
     fun register() {
         Registry.register(Registry.ITEM, MyIdentifier("tin_ingot"), TIN_INGOT)
         Registry.register(Registry.ITEM, MyIdentifier("lead_ingot"), LEAD_INGOT)
@@ -42,5 +45,7 @@ object PlanetsAndStarsItems {
         Registry.register(Registry.ITEM, MyIdentifier("basic_battery"), BASIC_BATTERY)
         Registry.register(Registry.ITEM, MyIdentifier("advanced_battery"), ADVANCED_BATTERY)
         Registry.register(Registry.ITEM, MyIdentifier("industrial_battery"), INDUSTRIAL_BATTERY)
+
+        Registry.register(Registry.ITEM, MyIdentifier("guide_book"), GUIDE)
     }
 }

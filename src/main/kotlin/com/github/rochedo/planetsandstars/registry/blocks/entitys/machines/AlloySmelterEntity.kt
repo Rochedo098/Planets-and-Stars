@@ -45,6 +45,6 @@ class AlloySmelterEntity(pos: BlockPos?, state: BlockState?) :
     }
 
     override fun markDirty() {
-
+        super<ImplementedInventory>.markDirty()
     }
 }
