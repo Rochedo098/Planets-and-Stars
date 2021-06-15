@@ -17,6 +17,7 @@ object PlanetsAndStars : ModInitializer {
         PlanetsAndStarsFluids.register()
         PlanetsAndStarsWorldgen.init()
         PlanetsAndStarsGUIs.register()
+        PlanetsAndStarsDimensions.register()
     }
 
     val PAS_GROUP: ItemGroup = FabricItemGroupBuilder.build(MyIdentifier("general_group")) { ItemStack { Items.IRON_BLOCK.asItem() } }
