@@ -1,6 +1,17 @@
 package com.github.rochedo.planetsandstars.api.atmosphere
 
-class Composition(Hydrogen: Int, Helium: Int, CarbonDioxide: Int, Nitrogen: Int, Oxygen: Int, Argon: Int, Methane: Int, Radioactive: Boolean) {
+import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
+
+class Composition(
+    Hydrogen: Int,
+    Helium: Int,
+    CarbonDioxide: Int,
+    Nitrogen: Int,
+    Oxygen: Int,
+    Argon: Int,
+    Methane: Int,
+    Radioactive: Boolean
+) {
     val hydrogen = Hydrogen
     val helium = Helium
     val carbon = CarbonDioxide
@@ -12,7 +23,7 @@ class Composition(Hydrogen: Int, Helium: Int, CarbonDioxide: Int, Nitrogen: Int,
 
     fun requireOxygenTank(): Boolean {
         var require: Boolean? = false
-        if(oxygen >= 22) {
+        if(oxygen >= PlanetsAndStarsConfigs.atmosphereConfig.oxygen_reqired) {
             require = true
         }
         return require!!
