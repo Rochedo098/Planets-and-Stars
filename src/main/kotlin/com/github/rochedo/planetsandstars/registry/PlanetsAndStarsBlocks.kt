@@ -2,6 +2,7 @@ package com.github.rochedo.planetsandstars.registry
 
 import com.github.rochedo.planetsandstars.registry.blocks.machines.AlloySmelterBlock
 import com.github.rochedo.planetsandstars.registry.blocks.machines.CrusherBlock
+import com.github.rochedo.planetsandstars.registry.blocks.tables.RocketMK1Block
 import com.github.rochedo.planetsandstars.utils.RegistryUtils.MyIdentifier
 import com.github.rochedo.planetsandstars.utils.RegistryUtils.PasBlockSettings
 import com.github.rochedo.planetsandstars.utils.RegistryUtils.PasItemSettings
@@ -15,6 +16,9 @@ object PlanetsAndStarsBlocks {
     // Machines
     val ALLOY_SMELTER: Block = AlloySmelterBlock()
     val CRUSHER: Block = CrusherBlock()
+
+    // Rockets
+    val ROCKET_MK1: Block = RocketMK1Block()
 
     // Planets Rocks
     val MERCURY_ROCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
