@@ -19,11 +19,11 @@ class RocketMK1Block: BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_BLOCK
         state: BlockState?,
         world: World?,
         pos: BlockPos?,
-        player: PlayerEntity?,
+        player: PlayerEntity,
         hand: Hand?,
         hit: BlockHitResult?
     ): ActionResult {
-        player!!.openHandledScreen(state!!.createScreenHandlerFactory(world, pos))
+        player.openHandledScreen(state!!.createScreenHandlerFactory(world, pos))
         return ActionResult.SUCCESS
     }
     override fun createBlockEntity(pos: BlockPos?, state: BlockState?): BlockEntity? {

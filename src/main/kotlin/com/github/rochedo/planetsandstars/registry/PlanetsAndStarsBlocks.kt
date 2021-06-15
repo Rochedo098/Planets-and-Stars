@@ -48,6 +48,9 @@ object PlanetsAndStarsBlocks {
         Registry.register(Registry.BLOCK, MyIdentifier("crusher"), CRUSHER)
         Registry.register(Registry.ITEM,  MyIdentifier("crusher"), BlockItem(CRUSHER, PasItemSettings()))
 
+        Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk1"), ROCKET_MK1)
+        Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk1"), BlockItem(ROCKET_MK1, PasItemSettings()))
+
         // Planets Rocks
         Registry.register(Registry.BLOCK, MyIdentifier("mercury_rock"), MERCURY_ROCK)
         Registry.register(Registry.ITEM,  MyIdentifier("mercury_rock"), BlockItem(MERCURY_ROCK, PasItemSettings()))
