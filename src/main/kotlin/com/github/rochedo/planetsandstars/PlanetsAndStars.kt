@@ -15,7 +15,6 @@ object PlanetsAndStars : ModInitializer {
         PlanetsAndStarsBlocks.register()
         PlanetsAndStarsItems.register()
         PlanetsAndStarsFluids.register()
-        PlanetsAndStarsWorldgen.init()
         PlanetsAndStarsGUIs.register()
         PlanetsAndStarsDimensions.register()
     }
