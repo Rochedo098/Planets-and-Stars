@@ -44,7 +44,7 @@ object PlanetsAndStarsGUIs {
 
         // Crusher
         CRUSHER_ENTITY = FabricBlockEntityTypeBuilder.create(::CrusherEntity, PlanetsAndStarsBlocks.CRUSHER).build(null)
-        Registry.register(Registry.BLOCK_ENTITY_TYPE, RegistryUtils.MyIdentifier("crusher_gui"), ALLOY_SMELTER_ENTITY)
+        Registry.register(Registry.BLOCK_ENTITY_TYPE, RegistryUtils.MyIdentifier("crusher_gui"), CRUSHER_ENTITY)
 
         CRUSHER_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(
             RegistryUtils.MyIdentifier("crusher_gui"),
