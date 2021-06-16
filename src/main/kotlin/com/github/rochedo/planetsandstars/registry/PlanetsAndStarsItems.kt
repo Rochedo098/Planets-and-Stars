@@ -13,8 +13,10 @@ object PlanetsAndStarsItems {
     val STEEL_INGOT: Item = Item(PasItemSettings())
     val SILICON: Item = Item(PasItemSettings())
 
-    // Easter Egg
-    val FORGE_TRASH: Item = Item(PasItemSettings())
+    // Raw Ores
+    val RAW_TIN: Item = Item(PasItemSettings())
+    val RAW_LEAD: Item = Item(PasItemSettings())
+    val RAW_SILVER: Item = Item(PasItemSettings())
 
     // Components
     val BASIC_CIRCUIT: Item = Item(PasItemSettings())
@@ -36,7 +38,9 @@ object PlanetsAndStarsItems {
         Registry.register(Registry.ITEM, MyIdentifier("steel_ingot"), STEEL_INGOT)
         Registry.register(Registry.ITEM, MyIdentifier("silicon"), SILICON)
 
-        Registry.register(Registry.ITEM, MyIdentifier("forge_trash"), FORGE_TRASH)
+        Registry.register(Registry.ITEM, MyIdentifier("raw_tin"), RAW_TIN)
+        Registry.register(Registry.ITEM, MyIdentifier("raw_lead"), RAW_LEAD)
+        Registry.register(Registry.ITEM, MyIdentifier("raw_silver"), RAW_SILVER)
 
         Registry.register(Registry.ITEM, MyIdentifier("basic_circuit"), BASIC_CIRCUIT)
         Registry.register(Registry.ITEM, MyIdentifier("advanced_circuit"), ADVANCED_CIRCUIT)

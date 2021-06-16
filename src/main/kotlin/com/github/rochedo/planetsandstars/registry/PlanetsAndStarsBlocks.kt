@@ -40,6 +40,10 @@ object PlanetsAndStarsBlocks {
     val LEAD_ORE: Block = Block(PasOreSetings(4.0f, 3))
     val SILVER_ORE: Block = Block(PasOreSetings(4.0f, 3))
 
+    val DEEPSLATE_TIN_ORE: Block = Block(PasOreSetings(4.0f, 3))
+    val DEEPSLATE_LEAD_ORE: Block = Block(PasOreSetings(4.0f, 3))
+    val DEEPSLATE_SILVER_ORE: Block = Block(PasOreSetings(4.0f, 3))
+
     fun register() {
         // Machines
         Registry.register(Registry.BLOCK, MyIdentifier("alloy_smelter"), ALLOY_SMELTER)
@@ -82,6 +86,15 @@ object PlanetsAndStarsBlocks {
 
         Registry.register(Registry.BLOCK, MyIdentifier("silver_ore"), SILVER_ORE)
         Registry.register(Registry.ITEM,  MyIdentifier("silver_ore"), BlockItem(SILVER_ORE, PasItemSettings()))
+
+        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_tin_ore"), DEEPSLATE_TIN_ORE)
+        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_tin_ore"), BlockItem(DEEPSLATE_TIN_ORE, PasItemSettings()))
+
+        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_lead_ore"), DEEPSLATE_LEAD_ORE)
+        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_lead_ore"), BlockItem(DEEPSLATE_LEAD_ORE, PasItemSettings()))
+
+        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_silver_ore"), DEEPSLATE_SILVER_ORE)
+        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_silver_ore"), BlockItem(DEEPSLATE_SILVER_ORE, PasItemSettings()))
 
         // Blocks
         Registry.register(Registry.BLOCK, MyIdentifier("tin_block"), TIN_BLOCK)
