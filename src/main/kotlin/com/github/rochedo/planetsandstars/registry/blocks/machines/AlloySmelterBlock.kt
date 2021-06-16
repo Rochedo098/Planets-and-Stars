@@ -14,6 +14,7 @@ import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 
+
 class AlloySmelterBlock : BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_BLOCK)) {
     override fun onUse(
         state: BlockState,

@@ -6,7 +6,6 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
-import java.lang.Exception
 
 object PlanetsAndStarsConfigs {
     private val read_gson = Gson()
