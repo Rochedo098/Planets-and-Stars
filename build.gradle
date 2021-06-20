@@ -44,6 +44,17 @@ repositories {
         name = "BuildCraft"
         url = "https://mod-buildcraft.com/maven"
     }
+
+    // REI Plugin
+    maven {
+        url "https://maven.shedaniel.me/"
+        content {
+            includeGroup "dev.architectury"
+            includeGroup "me.shedaniel"
+            includeGroup "me.shedaniel.cloth"
+            includeGroup "me.shedaniel.cloth.api"
+        }
+    }
 }
 
 dependencies {
@@ -60,6 +71,7 @@ dependencies {
     modImplementation include("io.github.cottonmc:LibGui:${project.libgui_version}") //LibGUI
     modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}" // Patchouli
     modApi include("dev.technici4n:FastTransferLib:${project.ftl_version}") // FTL
+    modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 }
 
 processResources {

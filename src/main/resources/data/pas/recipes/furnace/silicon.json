@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:nether_quartz"
+  },
+  "result": "planetsandstars:silicon",
+  "cookingtime": "200"
+}

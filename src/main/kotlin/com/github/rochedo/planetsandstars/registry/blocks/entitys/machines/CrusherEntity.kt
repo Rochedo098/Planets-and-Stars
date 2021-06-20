@@ -18,9 +18,10 @@ import net.minecraft.util.math.BlockPos
 
 class CrusherEntity(pos: BlockPos?, state: BlockState?) :
     BlockEntity(PlanetsAndStarsGUIs.CRUSHER_ENTITY, pos, state), ImplementedInventory, NamedScreenHandlerFactory {
+    private val items: DefaultedList<ItemStack> = DefaultedList.ofSize(INVENTORY_SIZE, ItemStack.EMPTY)
 
     override fun getItems(): DefaultedList<ItemStack> {
-        return DefaultedList.ofSize(INVENTORY_SIZE, ItemStack.EMPTY)
+        return items
     }
 
     override fun canPlayerUse(player: PlayerEntity): Boolean {

@@ -1,6 +1,5 @@
 package com.github.rochedo.planetsandstars.gui
 
-import com.github.rochedo.planetsandstars.utils.RegistryUtils
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription
 import io.github.cottonmc.cotton.gui.widget.WGridPanel
 import io.github.cottonmc.cotton.gui.widget.WItemSlot
@@ -14,11 +13,6 @@ class RocketMK1GUI (
     playerInventory: PlayerInventory?,
     context: ScreenHandlerContext?
 ) : SyncedGuiDescription(type, syncId, playerInventory, getBlockInventory(context, 8), null) {
-    companion object {
-        private val TEST_MESSAGE = RegistryUtils.MyIdentifier("test")
-        private val UNREGISTRED_ON_SERVER = RegistryUtils.MyIdentifier("unregistered_on_server")
-    }
-
     init {
         // Create Panel
         val root = WGridPanel()

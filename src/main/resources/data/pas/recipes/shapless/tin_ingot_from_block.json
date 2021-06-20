@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "planetsandstars:tin_block"
+    }
+  ],
+  "result": {
+    "item": "planetsandstars:tin_ingot",
+    "count": 9
+  }
+}

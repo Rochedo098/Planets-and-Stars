@@ -1,92 +1,82 @@
 package com.github.rochedo.planetsandstars.config
 
-import com.github.rochedo.planetsandstars.api.atmosphere.Contaminated
-import com.github.rochedo.planetsandstars.config.custominput.PolutionConfig
-import com.google.gson.Gson
+import com.github.rochedo.planetsandstars.config.customplanets.Polution
+import com.github.rochedo.planetsandstars.config.formats.*
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
 
+// Based on https://github.com/GabrielOlvH/Industrial-Revolution/blob/893c64f2b50fc829555a49ed43ae4a906eeba552/src/main/kotlin/me/steven/indrev/config/IRConfig.kt
+
 object PlanetsAndStarsConfigs {
-    private val read_gson = Gson()
-    private val write_gson = GsonBuilder().setPrettyPrinting().create()
-    private val folder: String = FabricLoader.getInstance().configDir.toString() + "/planetsandstars/"
+    private val gson = GsonBuilder().setPrettyPrinting().create()
 
-    val oresConfig = read_gson.fromJson(folder + "ores.json", OresConfig::class.java)
-    val machinesConfig = read_gson.fromJson(folder + "machines.json", MachinesConfig::class.java)
-    val atmosphereConfig = read_gson.fromJson(folder + "atmosphere.json", AtmosphereConfig::class.java)
+    lateinit var machines: Machines
+    lateinit var ores: Ores
+    lateinit var planets: Planets
+    lateinit var atmosphere: GeneralAtmosphere
 
-    fun verifyConfigExists(): Boolean {
-        var returns: Boolean = false
-        try {
-            val oreConfigFile: File = File(folder + "ores.json")
-            if (!oreConfigFile.exists()) {
-                writeOreConfig()
+    private fun generateConfigs(file: String, write: Any) {
+        val folder = File(FabricLoader.getInstance().configDir.toFile(), "planetsandstars")
+        if(!folder.exists()) {
+            try {
+                folder.mkdirs()
+            } catch (e: Exception) {
+                println("Could not create configs, future crash is possible")
             }
-
-            val machinesConfigFile: File = File(folder + "machines.json")
-            if (!machinesConfigFile.exists()) {
-                writeMachinesConfig()
-            }
-
-            val atmosphereConfigFile: File = File(folder + "atmosphere.json")
-            if (!atmosphereConfigFile.exists()) {
-                writeAtmosphereConfig()
-            }
-
-            returns = true
-        } catch(e: Exception) {
-            println("Failed to create config, future crash os predicted")
         }
-        return returns
+        val file = File(folder, file)
+        if (!file.exists()) {
+            file.createNewFile()
+            file.writeText(gson.toJson(write))
+        }
     }
 
-    private fun writeOreConfig() {
-        val config = OresConfig(
-            tin_ore = true,
-            lead_ore = true,
-            silver_ore = true,
+    init {
+        machines = Machines()
+        ores = Ores()
+        planets = Planets()
+        atmosphere = GeneralAtmosphere()
 
-            tin_ore_rarity = 1,
-            lead_ore_rarity = 2,
-            silver_ore_rarity = 3
-        )
-        val writeConfig = write_gson.toJson(config)
-        val file: File = File(folder + "ores.json")
-        file.writeText(writeConfig)
+        generateConfigs("machines.json", machines)
+        generateConfigs("ores.json", ores)
+        generateConfigs("planets.json", planets)
+        generateConfigs("atmosphere.json", atmosphere)
     }
+}
 
-    private fun writeMachinesConfig() {
-        val config = MachinesConfig (
-            alloy_smelter_active = true,
-            alloy_smelter_speed_modifier = 1,
-            alloy_smelter_consume_modifier = 1,
+class Machines {
+    val alloy_smelter: MachineConfig = MachineConfig(false, 1.0, 1.0)
+    val crusher: MachineConfig = MachineConfig(false, 1.0, 1.0)
+    val compressor: MachineConfig = MachineConfig(false, 1.0, 1.0)
 
-            crusher_active = true,
-            crusher_speed_modifier = 1,
-            crusher_consume_modifier = 1
-        )
-        val writeconfig = write_gson.toJson(config)
-        val file: File = File(folder + "machines.json")
-        file.writeText(writeconfig)
-    }
+    val rocket_mk1: MachineConfig = MachineConfig(true, 0.0, 0.0)
 
-    private fun writeAtmosphereConfig() {
-        val config = AtmosphereConfig(
-            oxygen_reqired = 22,
-            polution = arrayOf(PolutionConfig(
-                hydrogen = 25,
-                helium = 25,
-                carbon = 25,
-                nitrogen = 78,
-                argon = 25,
-                methane = 2
-            )),
-            radioactive = true,
-            contaminated = Contaminated.normal
-        )
-        val writeConfig = write_gson.toJson(config)
-        val file: File = File(folder + "atmosphere.json")
-        file.writeText(writeConfig)
-    }
+    val rock_analyzer: MachineConfig = MachineConfig(true, 1.0, 1.0)
+}
+
+class Ores {
+    val tin_ore: OreConfig = OreConfig(true, 10)
+    val lead_ore: OreConfig = OreConfig(true, 7)
+    val silver_ore: OreConfig = OreConfig(true, 7)
+
+    val deepslate_tin_ore: OreConfig = OreConfig(true, 5)
+    val deepslate_lead_ore: OreConfig = OreConfig(true, 3)
+    val deepslate_silver_ore: OreConfig = OreConfig(true, 3)
+}
+
+class Planets {
+    val mercury: PlanetConfig = PlanetConfig(true, true)
+    val venus: PlanetConfig = PlanetConfig(true, true)
+    val mars: PlanetConfig = PlanetConfig(true, true)
+    val jupiter: PlanetConfig = PlanetConfig(true, true)
+    val saturn: PlanetConfig = PlanetConfig(true, true)
+    val uranus: PlanetConfig = PlanetConfig(true, true)
+    val neptune: PlanetConfig = PlanetConfig(true, true)
+}
+
+class GeneralAtmosphere {
+    val general_atmosphere: AtmosphereConfig = AtmosphereConfig(15, Polution(10, 10, 10,10, 10, 10))
+    val thermal_suit: AtmosphereArmorConfig = AtmosphereArmorConfig(true)
+    val space_suit: AtmosphereArmorConfig = AtmosphereArmorConfig(true)
 }

@@ -1,6 +1,5 @@
 package com.github.rochedo.planetsandstars.gui
 
-import com.github.rochedo.planetsandstars.utils.RegistryUtils
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription
 import io.github.cottonmc.cotton.gui.widget.WGridPanel
 import io.github.cottonmc.cotton.gui.widget.WItemSlot
@@ -13,13 +12,7 @@ class AlloySmelterGUI(
     syncId: Int,
     playerInventory: PlayerInventory?,
     context: ScreenHandlerContext?
-) :
-    SyncedGuiDescription(type, syncId, playerInventory, getBlockInventory(context, 8), null) {
-    companion object {
-        private val TEST_MESSAGE = RegistryUtils.MyIdentifier("test")
-        private val UNREGISTERED_ON_SERVER = RegistryUtils.MyIdentifier("unregistered_on_server")
-    }
-
+) : SyncedGuiDescription(type, syncId, playerInventory, getBlockInventory(context, 8), null) {
     init {
         // Create Panel
         val root = WGridPanel()
@@ -32,7 +25,7 @@ class AlloySmelterGUI(
         val slot1 = WItemSlot.of(blockInventory, 0, 1, 1)
         root.add(slot1, 8, 3, 8, 8)
 
-        root.add(this.createPlayerInventoryPanel(), 1, 1)
+        root.add(this.createPlayerInventoryPanel(), 0, 1)
         root.validate(this)
     }
 }

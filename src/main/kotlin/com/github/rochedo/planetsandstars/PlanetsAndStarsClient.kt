@@ -1,6 +1,7 @@
 package com.github.rochedo.planetsandstars
 
 import com.github.rochedo.planetsandstars.gui.AlloySmelterGUI
+import com.github.rochedo.planetsandstars.gui.CompressorGUI
 import com.github.rochedo.planetsandstars.gui.CrusherGUI
 import com.github.rochedo.planetsandstars.gui.RocketMK1GUI
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
@@ -26,6 +27,17 @@ object PlanetsAndStarsClient: ClientModInitializer {
         ScreenRegistry.register<CrusherGUI, CottonInventoryScreen<CrusherGUI>>(
             PlanetsAndStarsGUIs.CRUSHER_HANDLER_TYPE,
             ScreenRegistry.Factory<CrusherGUI, CottonInventoryScreen<CrusherGUI>> { desc: CrusherGUI, inventory: PlayerInventory, title: Text? ->
+                CottonInventoryScreen(
+                    desc,
+                    inventory.player,
+                    title
+                )
+            }
+        )
+
+        ScreenRegistry.register<CompressorGUI, CottonInventoryScreen<CompressorGUI>>(
+            PlanetsAndStarsGUIs.COMPRESSOR_HANDLER_TYPE,
+            ScreenRegistry.Factory<CompressorGUI, CottonInventoryScreen<CompressorGUI>> { desc: CompressorGUI, inventory: PlayerInventory, title: Text? ->
                 CottonInventoryScreen(
                     desc,
                     inventory.player,

@@ -1,7 +1,7 @@
 package com.github.rochedo.planetsandstars.recipes.serializers
 
 import com.github.rochedo.planetsandstars.recipes.AlloySmelterRecipe
-import com.github.rochedo.planetsandstars.utils.RegistryUtils
+import com.github.rochedo.planetsandstars.utils.MyIdentifier
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import net.minecraft.item.ItemStack
@@ -13,7 +13,7 @@ import net.minecraft.util.registry.Registry
 
 class AlloySmelterRecipeSerializer : RecipeSerializer<AlloySmelterRecipe> {
     val INSTANCE: AlloySmelterRecipeSerializer = AlloySmelterRecipeSerializer()
-    val ID: Identifier = RegistryUtils.MyIdentifier("alloy_smelter_recipe")
+    val ID: Identifier = MyIdentifier("alloy_smelter_recipe")
 
     override fun read(id: Identifier, json: JsonObject): AlloySmelterRecipe {
         val recipeJson: AlloySmelterRecipe.Format = Gson().fromJson(json, AlloySmelterRecipe.Format::class.java)

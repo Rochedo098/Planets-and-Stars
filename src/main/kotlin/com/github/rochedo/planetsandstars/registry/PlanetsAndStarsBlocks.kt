@@ -1,12 +1,15 @@
 package com.github.rochedo.planetsandstars.registry
 
+import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
 import com.github.rochedo.planetsandstars.registry.blocks.machines.AlloySmelterBlock
+import com.github.rochedo.planetsandstars.registry.blocks.machines.CompressorBlock
 import com.github.rochedo.planetsandstars.registry.blocks.machines.CrusherBlock
-import com.github.rochedo.planetsandstars.registry.blocks.tables.RocketMK1Block
-import com.github.rochedo.planetsandstars.utils.RegistryUtils.MyIdentifier
-import com.github.rochedo.planetsandstars.utils.RegistryUtils.PasBlockSettings
-import com.github.rochedo.planetsandstars.utils.RegistryUtils.PasItemSettings
-import com.github.rochedo.planetsandstars.utils.RegistryUtils.PasOreSetings
+import com.github.rochedo.planetsandstars.registry.blocks.rockets.RocketMK1Block
+import com.github.rochedo.planetsandstars.registry.blocks.tables.RockAnalyzerBlock
+import com.github.rochedo.planetsandstars.utils.MyIdentifier
+import com.github.rochedo.planetsandstars.utils.PasBlockSettings
+import com.github.rochedo.planetsandstars.utils.PasItemSettings
+import com.github.rochedo.planetsandstars.utils.PasOreSetings
 import net.minecraft.block.Block
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
@@ -16,9 +19,13 @@ object PlanetsAndStarsBlocks {
     // Machines
     val ALLOY_SMELTER: Block = AlloySmelterBlock()
     val CRUSHER: Block = CrusherBlock()
+    val COMPRESSOR: Block = CompressorBlock()
 
     // Rockets
     val ROCKET_MK1: Block = RocketMK1Block()
+
+    // Tables
+    val ROCK_ANALYZER: Block = RockAnalyzerBlock()
 
     // Planets Rocks
     val MERCURY_ROCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
@@ -46,14 +53,27 @@ object PlanetsAndStarsBlocks {
 
     fun register() {
         // Machines
-        Registry.register(Registry.BLOCK, MyIdentifier("alloy_smelter"), ALLOY_SMELTER)
-        Registry.register(Registry.ITEM,  MyIdentifier("alloy_smelter"), BlockItem(ALLOY_SMELTER, PasItemSettings()))
+        val machinesConfig = PlanetsAndStarsConfigs.machines
+        if (machinesConfig.alloy_smelter.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("alloy_smelter"), ALLOY_SMELTER)
+            Registry.register(Registry.ITEM,  MyIdentifier("alloy_smelter"), BlockItem(ALLOY_SMELTER, PasItemSettings()))
+        }
+        if (machinesConfig.crusher.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("crusher"), CRUSHER)
+            Registry.register(Registry.ITEM,  MyIdentifier("crusher"), BlockItem(CRUSHER, PasItemSettings()))
+        }
+        if (machinesConfig.compressor.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("compressor"), COMPRESSOR)
+            Registry.register(Registry.ITEM,  MyIdentifier("compressor"), BlockItem(COMPRESSOR, PasItemSettings()))
+        }
 
-        Registry.register(Registry.BLOCK, MyIdentifier("crusher"), CRUSHER)
-        Registry.register(Registry.ITEM,  MyIdentifier("crusher"), BlockItem(CRUSHER, PasItemSettings()))
-
+        // Rockets
         Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk1"), ROCKET_MK1)
         Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk1"), BlockItem(ROCKET_MK1, PasItemSettings()))
+
+        // Tables
+        Registry.register(Registry.BLOCK, MyIdentifier("rock_analyzer"), ROCK_ANALYZER)
+        Registry.register(Registry.ITEM,  MyIdentifier("rock_analyzer"), BlockItem(ROCK_ANALYZER, PasItemSettings()))
 
         // Planets Rocks
         Registry.register(Registry.BLOCK, MyIdentifier("mercury_rock"), MERCURY_ROCK)
@@ -78,23 +98,31 @@ object PlanetsAndStarsBlocks {
         Registry.register(Registry.ITEM,  MyIdentifier("neptune_rock"), BlockItem(NEPTUNE_ROCK, PasItemSettings()))
 
         // Ores
-        Registry.register(Registry.BLOCK, MyIdentifier("tin_ore"), TIN_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("tin_ore"), BlockItem(TIN_ORE, PasItemSettings()))
-
-        Registry.register(Registry.BLOCK, MyIdentifier("lead_ore"), LEAD_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("lead_ore"), BlockItem(LEAD_ORE, PasItemSettings()))
-
-        Registry.register(Registry.BLOCK, MyIdentifier("silver_ore"), SILVER_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("silver_ore"), BlockItem(SILVER_ORE, PasItemSettings()))
-
-        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_tin_ore"), DEEPSLATE_TIN_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_tin_ore"), BlockItem(DEEPSLATE_TIN_ORE, PasItemSettings()))
-
-        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_lead_ore"), DEEPSLATE_LEAD_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_lead_ore"), BlockItem(DEEPSLATE_LEAD_ORE, PasItemSettings()))
-
-        Registry.register(Registry.BLOCK, MyIdentifier("deepslate_silver_ore"), DEEPSLATE_SILVER_ORE)
-        Registry.register(Registry.ITEM,  MyIdentifier("deepslate_silver_ore"), BlockItem(DEEPSLATE_SILVER_ORE, PasItemSettings()))
+        val oresConfig = PlanetsAndStarsConfigs.ores
+        if (oresConfig.tin_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("tin_ore"), TIN_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("tin_ore"), BlockItem(TIN_ORE, PasItemSettings()))
+        }
+        if (oresConfig.lead_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("lead_ore"), LEAD_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("lead_ore"), BlockItem(LEAD_ORE, PasItemSettings()))
+        }
+        if (oresConfig.silver_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("silver_ore"), SILVER_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("silver_ore"), BlockItem(SILVER_ORE, PasItemSettings()))
+        }
+        if (oresConfig.deepslate_tin_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("deepslate_tin_ore"), DEEPSLATE_TIN_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("deepslate_tin_ore"), BlockItem(DEEPSLATE_TIN_ORE, PasItemSettings()))
+        }
+        if (oresConfig.deepslate_lead_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("deepslate_lead_ore"), DEEPSLATE_LEAD_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("deepslate_lead_ore"), BlockItem(DEEPSLATE_LEAD_ORE, PasItemSettings()))
+        }
+        if (oresConfig.deepslate_silver_ore.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("deepslate_silver_ore"), DEEPSLATE_SILVER_ORE)
+            Registry.register(Registry.ITEM,  MyIdentifier("deepslate_silver_ore"), BlockItem(DEEPSLATE_SILVER_ORE, PasItemSettings()))
+        }
 
         // Blocks
         Registry.register(Registry.BLOCK, MyIdentifier("tin_block"), TIN_BLOCK)

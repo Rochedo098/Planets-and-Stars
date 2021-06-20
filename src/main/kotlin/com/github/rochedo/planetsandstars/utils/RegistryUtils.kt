@@ -8,20 +8,18 @@ import net.minecraft.block.Material
 import net.minecraft.item.Item
 import net.minecraft.util.Identifier
 
-object RegistryUtils {
-    fun MyIdentifier(name: String): Identifier {
-        return Identifier("planetsandstars", name)
-    }
+fun MyIdentifier(name: String): Identifier {
+    return Identifier("planetsandstars", name)
+}
 
-    fun PasItemSettings(): Item.Settings {
-        return FabricItemSettings().group(PlanetsAndStars.PAS_GROUP)
-    }
+fun PasItemSettings(): Item.Settings {
+    return FabricItemSettings().group(PlanetsAndStars.PAS_GROUP)
+}
 
-    fun PasBlockSettings(material: Material, strength: Float): FabricBlockSettings {
-        return FabricBlockSettings.of(material).strength(strength)
-    }
+fun PasBlockSettings(material: Material, strength: Float): FabricBlockSettings {
+    return FabricBlockSettings.of(material).strength(strength)
+}
 
-    fun PasOreSetings(strength: Float, mininglevel: Int): FabricBlockSettings {
-        return FabricBlockSettings.of(Material.STONE).strength(strength).breakByTool(FabricToolTags.PICKAXES, mininglevel)
-    }
+fun PasOreSetings(strength: Float, mininglevel: Int): FabricBlockSettings {
+    return FabricBlockSettings.of(Material.STONE).strength(strength).breakByTool(FabricToolTags.PICKAXES, mininglevel)
 }
