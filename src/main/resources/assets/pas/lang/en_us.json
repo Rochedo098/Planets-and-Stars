@@ -1,5 +1,6 @@
 {
-  "item.planetsandstars.copper_ingot": "Copper Ingot",
+  "itemGroup.planetsandstars.general_group": "Planets And Stars",
+
   "item.planetsandstars.tin_ingot": "Tin Ingot",
   "item.planetsandstars.lead_ingot": "Lead Ingot",
   "item.planetsandstars.silver_ingot": "Silver Ingot",
@@ -9,6 +10,10 @@
   "item.planetsandstars.basic_circuit": "Basic Circuit",
   "item.planetsandstars.advanced_circuit": "Advanced Circuit",
   "item.planetsandstars.industrial_circuit": "Industrial Circuit",
+
+  "item.planetsandstars.basic_battery": "Basic Battery",
+  "item.planetsnadstars.advanced_battery": "Advanced Battery",
+  "item.planetsandstars.industrial_battery": "Industrial Battery",
 
   "item.planetsandstars.space_suit_helmet": "Space Suit Helmet",
   "item.planetsandstars.space_suit_chestplate": "Space Suit Chestplate",
@@ -20,12 +25,10 @@
   "item.planetsandstars.thermal_suit_leggings": "Thermal Suit Leggings",
   "item.planetsandstars.thermal_suit_boots": "Thermal Suit Boots",
 
-  "block.planetsandstars.copper_ore": "Copper Ore",
   "block.planetsandstars.tin_ore": "Tin Ore",
   "block.planetsandstars.lead_ore": "Lead Ore",
   "block.planetsandstars.silver_ore": "Silver Ore",
 
-  "block.planetsandstars.copper_block": "Copper Block",
   "block.planetsandstars.tin_block": "Tin Block",
   "block.planetsandstars.lead_block": "Lead Block",
   "block.planetsandstars.silver_block": "Silver Block",
@@ -34,8 +37,8 @@
   "block.planetsandstars.alloy_smelter": "Alloy Smelter",
   "block.planetsandstars.crusher": "Crusher",
   "block.planetsandstars.compressor": "Compressor",
-  "block.planetsandstars.circuit_maker": "Circuit Maker",
-  "block.planetsandstars.analyzer": "Analyzer",
+  "block.planetsandstars.rocket_mk1": "Rocket MK1",
+  "block.planetsandstars.rock_analyzer": "Rock Analyzer",
 
   "block.planetsandstars.mercury_rock": "Mercury Rock",
   "block.planetsandstars.venus_rock": "Venus Rock",
@@ -43,7 +46,5 @@
   "block.planetsandstars.jupiter_rock": "Jupiter Rock",
   "block.planetsandstars.saturn_rock": "Saturn Rock",
   "block.planetsandstars.uranus_rock": "Uranus Rock",
-  "block.planetsandstars.neptune_rock": "Neptune Rock",
-
-  "itemGroup.planetsandstars.general_group": "Planets And Stars"
+  "block.planetsandstars.neptune_rock": "Neptune Rock"
 }

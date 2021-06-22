@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:jupiter_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.jupiter"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.jupiter.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk2",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:jupiter_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

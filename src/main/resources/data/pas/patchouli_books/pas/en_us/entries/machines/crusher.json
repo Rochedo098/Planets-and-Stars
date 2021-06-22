@@ -1,0 +1,12 @@
+{
+  "name": "Crusher",
+  "icon": "planetsandstars:crusher",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:machine_frame",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

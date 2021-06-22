@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "SAS",
+    "III"
+  ],
+  "key": {
+    "L": {
+      "item": "planetsandstars:silver_ingot"
+    },
+    "S": {
+      "item": "planetsandstars:silicon"
+    },
+    "A": {
+      "item": "planetsandstars:advanced_circuit"
+    }
+  },
+  "result": {
+    "item": "planetsandstars:industrial_circuit"
+  }
+}

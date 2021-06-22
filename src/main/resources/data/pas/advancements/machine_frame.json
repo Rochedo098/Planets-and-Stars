@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:machine_frame"
+    },
+    "title": {
+      "translate": "advancements.planetsnadstars.machine_frame"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.machine_frame.description"
+    }
+  },
+  "parent": "planetsandstars:getting_started",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:machine_frame"]
+          }
+        ]
+      }
+    }
+  }
+}

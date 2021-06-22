@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "SBS",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "planetsandstars:lead_ingot"
+    },
+    "S": {
+      "item": "planetsandstars:silicon"
+    },
+    "B": {
+      "item": "planetsandstars:basic_circuit"
+    }
+  },
+  "result": {
+    "item": "planetsandstars:advanced_circuit"
+  }
+}

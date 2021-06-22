@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:uranus_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.uranus"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.uranus.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk3",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:uranus_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

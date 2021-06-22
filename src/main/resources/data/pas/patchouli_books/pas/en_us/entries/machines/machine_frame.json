@@ -1,0 +1,12 @@
+{
+  "name": "Machine Frame",
+  "icon": "planetsandstars:machine_frame",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:getting_started",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

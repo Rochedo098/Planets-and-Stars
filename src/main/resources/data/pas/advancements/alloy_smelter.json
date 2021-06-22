@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:alloy_smelter"
+    },
+    "title": {
+      "translate": "advancements.planetsnadstars.alloy_smelter"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.alloy_smelter.description"
+    }
+  },
+  "parent": "planetsandstars:machine_frame",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:alloy_smelter"]
+          }
+        ]
+      }
+    }
+  }
+}

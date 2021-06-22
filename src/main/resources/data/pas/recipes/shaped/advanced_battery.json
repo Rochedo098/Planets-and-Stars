@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "TRT",
+    " T "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "item": "planetsandstars:lead_ingot"
+    }
+  },
+  "result": {
+    "item": "planetsandstars:advanced_battery"
+  }
+}

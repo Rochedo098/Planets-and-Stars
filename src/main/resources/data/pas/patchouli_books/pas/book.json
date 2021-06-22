@@ -1,7 +1,9 @@
 {
   "name": "Planets and Stars Guide",
-  "landing_text": "Comming Soon",
+  "landing_text": "The guide book for your exploration on space",
   "version": 1,
-  "creative_tab": "planetsandstars",
-  "custom_book_item": "planetsandstars:guide"
+  "advancements_namespaces": [ "planetsandstars" ],
+  "creative_tab": "planetsandstars.general_group",
+  "custom_book_item": "planetsandstars:guide_book",
+  "show_progress": true
 }

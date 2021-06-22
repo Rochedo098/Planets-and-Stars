@@ -1,0 +1,12 @@
+{
+  "name": "Mercury",
+  "icon": "planetsandstars:mercury_rock",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:rocket_mk1",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

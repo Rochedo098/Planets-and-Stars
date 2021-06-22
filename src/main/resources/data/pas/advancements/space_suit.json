@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:space_suit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.planetsnadstars.space_suit"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.space_suit.description"
+    }
+  },
+  "parent": "planetsandstars:getting_started",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "planetsandstars:space_suit_helmet",
+              "planetsandstars:space_suit_chestplate",
+              "planetsandstars:space_suit_leggings",
+              "planetsandstars:space_suit_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:mars_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.mars"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.mars.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk2",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:mars_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

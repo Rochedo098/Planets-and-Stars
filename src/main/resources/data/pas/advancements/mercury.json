@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:mercury_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.mercury"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.mercury.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk1",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:mercury_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

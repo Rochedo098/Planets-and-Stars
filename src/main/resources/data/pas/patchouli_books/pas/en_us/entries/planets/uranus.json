@@ -1,0 +1,12 @@
+{
+  "name": "Uranus",
+  "icon": "planetsandstars:uranus_rock",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:rocket_mk3",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

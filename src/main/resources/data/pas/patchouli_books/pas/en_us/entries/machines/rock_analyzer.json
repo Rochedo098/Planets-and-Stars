@@ -1,0 +1,12 @@
+{
+  "name": "Rock Analyzer",
+  "icon": "planetsandstars:rock_analyzer",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:machine_frame",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

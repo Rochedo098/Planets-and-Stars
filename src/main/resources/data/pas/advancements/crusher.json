@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:crusher"
+    },
+    "title": {
+      "translate": "advancements.planetsnadstars.crusher"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.crusher.description"
+    }
+  },
+  "parent": "planetsandstars:machine_frame",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:crusher"]
+          }
+        ]
+      }
+    }
+  }
+}

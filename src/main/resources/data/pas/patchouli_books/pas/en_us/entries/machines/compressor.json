@@ -1,0 +1,12 @@
+{
+  "name": "Compressor",
+  "icon": "planetsandstars:compressor",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:machine_frame",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

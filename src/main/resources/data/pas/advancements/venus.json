@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:venus_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.venus"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.venus.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk1",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:venus_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

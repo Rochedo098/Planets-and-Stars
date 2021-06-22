@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:guide_book"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.getting_started"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.getting_started.description"
+    },
+    "background": "planetsandstars:textures/gui/advancements/backgrounds/space.png"
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "loot": [
+      "planetsandstrs:getting_started"
+    ]
+  }
+}

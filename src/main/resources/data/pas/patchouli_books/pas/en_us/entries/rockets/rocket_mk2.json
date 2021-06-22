@@ -1,0 +1,12 @@
+{
+  "name": "Rocket MK2",
+  "icon": "planetsandstars:rocket_mk2",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:rocket_mk1",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

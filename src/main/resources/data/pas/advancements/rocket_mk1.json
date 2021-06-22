@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:rocket_mk1"
+    },
+    "title": {
+      "translate": "advancements.planetsnadstars.rocket_mk1"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.rocket_mk1.description"
+    }
+  },
+  "parent": "planetsandstars:getting_started",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:rocket_mk1"]
+          }
+        ]
+      }
+    }
+  }
+}

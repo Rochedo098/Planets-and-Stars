@@ -25,10 +25,10 @@ object PlanetsAndStarsConfigs {
                 println("Could not create configs, future crash is possible")
             }
         }
-        val file = File(folder, file)
-        if (!file.exists()) {
-            file.createNewFile()
-            file.writeText(gson.toJson(write))
+        val fi = File(folder, file)
+        if (!fi.exists()) {
+            fi.createNewFile()
+            fi.writeText(gson.toJson(write))
         }
     }
 
@@ -66,13 +66,13 @@ class Ores {
 }
 
 class Planets {
-    val mercury: PlanetConfig = PlanetConfig(true, true)
-    val venus: PlanetConfig = PlanetConfig(true, true)
-    val mars: PlanetConfig = PlanetConfig(true, true)
-    val jupiter: PlanetConfig = PlanetConfig(true, true)
-    val saturn: PlanetConfig = PlanetConfig(true, true)
-    val uranus: PlanetConfig = PlanetConfig(true, true)
-    val neptune: PlanetConfig = PlanetConfig(true, true)
+    val mercury: PlanetConfig = PlanetConfig(false, true)
+    val venus: PlanetConfig = PlanetConfig(false, true)
+    val mars: PlanetConfig = PlanetConfig(false, true)
+    val jupiter: PlanetConfig = PlanetConfig(false, true)
+    val saturn: PlanetConfig = PlanetConfig(false, true)
+    val uranus: PlanetConfig = PlanetConfig(false, true)
+    val neptune: PlanetConfig = PlanetConfig(false, true)
 }
 
 class GeneralAtmosphere {

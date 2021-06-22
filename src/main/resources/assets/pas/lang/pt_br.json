@@ -1,14 +1,50 @@
 {
-  "item.planetsandstars.copper_ingot": "Lingote de Cobre",
+  "itemGroup.planetsandstars.general_group": "Planetas e Estrelas",
+
   "item.planetsandstars.tin_ingot": "Lingote de Estanho",
   "item.planetsandstars.lead_ingot": "Lingote de Chumbo",
   "item.planetsandstars.silver_ingot": "Lingote de Prata",
-  "item.planetsandstars.steel_ingot": "Lingote de Aco",
-  "item.planetsandstars.silicon": "Silicio",
+  "item.planetsandstars.steel_ingot": "Lingote de Aço",
+  "item.planetsandstars.silicon": "Silício",
 
-  "item.planetsandstars.basic_circuit": "Circuito Basico",
-  "item.planetsandstars.advanced_circuit": "Circuito Avancado",
+  "item.planetsandstars.basic_circuit": "Circuito Básico",
+  "item.planetsandstars.advanced_circuit": "Circuito Avançado",
   "item.planetsandstars.industrial_circuit": "Circuito Industrial",
 
-  "block.planetsandstars.copper_ore": "Minerio de Cobre"
+  "item.planetsandstars.basic_battery": "Bateria Básica",
+  "item.planetsnadstars.advanced_battery": "Bateria Avançada",
+  "item.planetsandstars.industrial_battery": "Bateria Industrial",
+
+  "item.planetsandstars.space_suit_helmet": "Capacete de Traje Espacial",
+  "item.planetsandstars.space_suit_chestplate": "Peitoral de Traje Espacial",
+  "item.planetsandstars.space_suit_leggings": "Calças de Traje Espacial",
+  "item.planetsandstars.space_suit_boots": "Botas de Traje Espacial",
+
+  "item.planetsandstars.thermal_suit_helmet": "Capacete Térmico",
+  "item.planetsandstars.thermal_suit_chestplate": "Peitoral Térmico",
+  "item.planetsandstars.thermal_suit_leggings": "Calças Térmicas",
+  "item.planetsandstars.thermal_suit_boots": "Botas Térmicas",
+
+  "block.planetsandstars.tin_ore": "Minério de Estanho",
+  "block.planetsandstars.lead_ore": "Minério de Chumbo",
+  "block.planetsandstars.silver_ore": "Minério de Prata",
+
+  "block.planetsandstars.tin_block": "Bloco de Estanho",
+  "block.planetsandstars.lead_block": "Bloco de Chumbo",
+  "block.planetsandstars.silver_block": "Bloco de Prata",
+  "block.planetsandstars.steel_block": "Bloco de Aço",
+
+  "block.planetsandstars.alloy_smelter": "Fundidora de Liga",
+  "block.planetsandstars.crusher": "Triturador",
+  "block.planetsandstars.compressor": "Compressor",
+  "block.planetsandstars.rocket_mk1": "Foguete MK1",
+  "block.planetsandstars.rock_analyzer": "Analizador de Pedras",
+
+  "block.planetsandstars.mercury_rock": "Pedra de Mercúrio",
+  "block.planetsandstars.venus_rock": "Pedra de Vênus",
+  "block.planetsandstars.mars_rock": "Pedra de Marte",
+  "block.planetsandstars.jupiter_rock": "Pedra de Júpiter",
+  "block.planetsandstars.saturn_rock": "Pedra de Saturno",
+  "block.planetsandstars.uranus_rock": "Pedra de Urano",
+  "block.planetsandstars.neptune_rock": "Pedra de Netuno"
 }

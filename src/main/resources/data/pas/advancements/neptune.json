@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:neptune_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.neptune"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.neptune.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk3",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:neptune_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

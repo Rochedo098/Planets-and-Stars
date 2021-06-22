@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "planetsandstars:saturn_rock"
+    },
+    "title": {
+      "translate": "advancements.planetsandstars.saturn"
+    },
+    "description": {
+      "translate": "advancements.planetsandstars.saturn.description"
+    }
+  },
+  "parent": "planetsandstars:rocket_mk3",
+  "criteria": {
+    "checkInv": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["planetsandstars:saturn_rock"]
+          }
+        ]
+      }
+    }
+  }
+}

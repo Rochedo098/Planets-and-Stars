@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "TRT",
+    " T "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "item": "planetsandstars:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "planetsandstars:industrial_battery"
+  }
+}

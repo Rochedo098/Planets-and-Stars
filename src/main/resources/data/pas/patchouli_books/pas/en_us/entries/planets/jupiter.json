@@ -1,0 +1,12 @@
+{
+  "name": "Jupiter",
+  "icon": "planetsandstars:jupiter_rock",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:rocket_mk2",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}

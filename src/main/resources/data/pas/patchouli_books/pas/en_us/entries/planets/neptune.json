@@ -1,0 +1,12 @@
+{
+  "name": "Neptune",
+  "icon": "planetsandstars:neptune_rock",
+  "category": "pas:planets",
+  "advancement": "planetsandstars:rocket_mk3",
+  "pages": [
+    {
+      "type": "text",
+      "text": "Comming Soon"
+    }
+  ]
+}
