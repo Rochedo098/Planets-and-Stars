@@ -3,7 +3,6 @@ package com.github.rochedo.planetsandstars.config
 import com.github.rochedo.planetsandstars.config.customplanets.Atmosphere
 import com.github.rochedo.planetsandstars.config.customplanets.CustomPlanet
 import com.github.rochedo.planetsandstars.config.customplanets.Polution
-import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsBlocks
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File

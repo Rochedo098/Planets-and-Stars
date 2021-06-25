@@ -5,6 +5,8 @@ import com.github.rochedo.planetsandstars.registry.blocks.machines.AlloySmelterB
 import com.github.rochedo.planetsandstars.registry.blocks.machines.CompressorBlock
 import com.github.rochedo.planetsandstars.registry.blocks.machines.CrusherBlock
 import com.github.rochedo.planetsandstars.registry.blocks.rockets.RocketMK1Block
+import com.github.rochedo.planetsandstars.registry.blocks.rockets.RocketMK2Block
+import com.github.rochedo.planetsandstars.registry.blocks.rockets.RocketMK3Block
 import com.github.rochedo.planetsandstars.registry.blocks.tables.RockAnalyzerBlock
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
 import com.github.rochedo.planetsandstars.utils.PasBlockSettings
@@ -23,9 +25,14 @@ object PlanetsAndStarsBlocks {
 
     // Rockets
     val ROCKET_MK1: Block = RocketMK1Block()
+    val ROCKET_MK2: Block = RocketMK2Block()
+    val ROCKET_MK3: Block = RocketMK3Block()
 
     // Tables
     val ROCK_ANALYZER: Block = RockAnalyzerBlock()
+
+    // Others
+    val MACHINE_FRAME: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
 
     // Planets Rocks
     val MERCURY_ROCK: Block = Block(PasBlockSettings(Material.METAL, 4.0f))
@@ -68,12 +75,28 @@ object PlanetsAndStarsBlocks {
         }
 
         // Rockets
-        Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk1"), ROCKET_MK1)
-        Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk1"), BlockItem(ROCKET_MK1, PasItemSettings()))
+        if (machinesConfig.rocket_mk1.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk1"), ROCKET_MK1)
+            Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk1"), BlockItem(ROCKET_MK1, PasItemSettings()))
+        }
+        if (machinesConfig.rocket_mk2.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk2"), ROCKET_MK2)
+            Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk2"), BlockItem(ROCKET_MK2, PasItemSettings()))
+        }
+        if (machinesConfig.rocket_mk3.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("rocket_mk3"), ROCKET_MK3)
+            Registry.register(Registry.ITEM,  MyIdentifier("rocket_mk3"), BlockItem(ROCKET_MK3, PasItemSettings()))
+        }
 
         // Tables
-        Registry.register(Registry.BLOCK, MyIdentifier("rock_analyzer"), ROCK_ANALYZER)
-        Registry.register(Registry.ITEM,  MyIdentifier("rock_analyzer"), BlockItem(ROCK_ANALYZER, PasItemSettings()))
+        if (machinesConfig.rock_analyzer.active) {
+            Registry.register(Registry.BLOCK, MyIdentifier("rock_analyzer"), ROCK_ANALYZER)
+            Registry.register(Registry.ITEM,  MyIdentifier("rock_analyzer"), BlockItem(ROCK_ANALYZER, PasItemSettings()))
+        }
+
+        // Others
+        Registry.register(Registry.BLOCK, MyIdentifier("machine_frame"), MACHINE_FRAME)
+        Registry.register(Registry.ITEM,  MyIdentifier("machine_frame"), BlockItem(MACHINE_FRAME, PasItemSettings()))
 
         // Planets Rocks
         Registry.register(Registry.BLOCK, MyIdentifier("mercury_rock"), MERCURY_ROCK)

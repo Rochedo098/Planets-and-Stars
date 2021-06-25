@@ -21,7 +21,6 @@ import java.util.concurrent.Executor
 import java.util.function.Function
 import java.util.function.Supplier
 
-
 class MercuryChunkGenerator private constructor (
     biomeSource: BiomeSource, biomeSource2: BiomeSource, private val genSeed: Long,
     private val settings: () -> ChunkGeneratorSettings, private val biomeRegistry: Registry<Biome>

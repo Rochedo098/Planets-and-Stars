@@ -11,7 +11,6 @@ import net.minecraft.block.Blocks
 import net.minecraft.block.entity.BlockEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.hit.BlockHitResult
@@ -41,7 +40,7 @@ class AlloySmelterBlock : BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_B
         return BlockRenderType.MODEL
     }
 
-    override fun activate(state: BlockState, world: World, pos: BlockPos, player: PlayerEntity, hand: Hand, result: BlockHitResult): Boolean {
+    fun activate(state: BlockState, world: World, pos: BlockPos, player: PlayerEntity, hand: Hand, result: BlockHitResult): Boolean {
         if (!world.isClient) {
             val inventory: AlloySmelterEntity = AlloySmelterEntity(pos, state)
             val match: Optional<AlloySmelterRecipe> = world.recipeManager.getFirstMatch(AlloySmelterRecipeType().INSTANCE, inventory, world)

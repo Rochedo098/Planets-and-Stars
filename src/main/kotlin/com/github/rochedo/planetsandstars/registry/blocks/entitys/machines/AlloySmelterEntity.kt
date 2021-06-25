@@ -13,11 +13,8 @@ import net.minecraft.screen.ScreenHandler
 import net.minecraft.screen.ScreenHandlerContext
 import net.minecraft.text.LiteralText
 import net.minecraft.text.Text
-import net.minecraft.util.Hand
 import net.minecraft.util.collection.DefaultedList
-import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
-import net.minecraft.world.World
 
 class AlloySmelterEntity(pos: BlockPos?, state: BlockState?) :
     BlockEntity(PlanetsAndStarsGUIs.ALLOY_SMELTER_ENTITY, pos, state), ImplementedInventory, NamedScreenHandlerFactory {

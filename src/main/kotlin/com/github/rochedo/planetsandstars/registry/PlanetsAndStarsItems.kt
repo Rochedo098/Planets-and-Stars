@@ -1,6 +1,8 @@
 package com.github.rochedo.planetsandstars.registry
 
 import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
+import com.github.rochedo.planetsandstars.registry.items.BatteryItem
+import com.github.rochedo.planetsandstars.registry.items.OxygenTank
 import com.github.rochedo.planetsandstars.registry.materials.armor.SpaceSuitMaterial
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
 import com.github.rochedo.planetsandstars.utils.PasItemSettings
@@ -29,9 +31,9 @@ object PlanetsAndStarsItems {
     val INDUSTRIAL_CIRCUIT: Item = Item(PasItemSettings())
 
     // Batterys
-    val BASIC_BATTERY: Item = Item(PasItemSettings())
-    val ADVANCED_BATTERY: Item = Item(PasItemSettings())
-    val INDUSTRIAL_BATTERY: Item = Item(PasItemSettings())
+    val BASIC_BATTERY: Item = BatteryItem(14999.9, 0.0, true, true)
+    val ADVANCED_BATTERY: Item = BatteryItem(24999.9, 0.0, true, true)
+    val INDUSTRIAL_BATTERY: Item = BatteryItem(99999.9, 0.0, true, true)
 
     // Guide
     val GUIDE: Item = Item(PasItemSettings())
@@ -48,6 +50,8 @@ object PlanetsAndStarsItems {
     val THERMAL_SUIT_CHESTPLATE: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.CHEST, PasItemSettings())
     val THERMAL_SUIT_LEGGINGS: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.LEGS, PasItemSettings())
     val THERMAL_SUIT_BOOTS: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.FEET, PasItemSettings())
+
+    val OXYGEN_TANK: Item = OxygenTank()
 
     fun register() {
         Registry.register(Registry.ITEM, MyIdentifier("tin_ingot"), TIN_INGOT)
@@ -85,5 +89,7 @@ object PlanetsAndStarsItems {
             Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_leggings"), THERMAL_SUIT_LEGGINGS)
             Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_boots"), THERMAL_SUIT_BOOTS)
         }
+
+        Registry.register(Registry.ITEM, MyIdentifier("oxygen_tank"), OXYGEN_TANK)
     }
 }

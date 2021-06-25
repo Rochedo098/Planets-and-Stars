@@ -1,0 +1,25 @@
+{
+  "type": "planetsandstars:mercury_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "seed": 389952768,
+    "settings": {
+      "biome": "minecraft:the_void",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "planetsandstars:mercury_rock",
+          "height": 25
+        }
+      ],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}

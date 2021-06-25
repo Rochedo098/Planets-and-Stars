@@ -51,18 +51,20 @@ class Machines {
     val compressor: MachineConfig = MachineConfig(false, 1.0, 1.0)
 
     val rocket_mk1: MachineConfig = MachineConfig(true, 0.0, 0.0)
+    val rocket_mk2: MachineConfig = MachineConfig(true, 0.0, 0.0)
+    val rocket_mk3: MachineConfig = MachineConfig(true, 0.0, 0.0)
 
     val rock_analyzer: MachineConfig = MachineConfig(true, 1.0, 1.0)
 }
 
 class Ores {
-    val tin_ore: OreConfig = OreConfig(true, 10)
-    val lead_ore: OreConfig = OreConfig(true, 7)
-    val silver_ore: OreConfig = OreConfig(true, 7)
+    val tin_ore: OreConfig = OreConfig(true, 7, 10)
+    val lead_ore: OreConfig = OreConfig(true, 5, 7)
+    val silver_ore: OreConfig = OreConfig(true, 5, 7)
 
-    val deepslate_tin_ore: OreConfig = OreConfig(true, 5)
-    val deepslate_lead_ore: OreConfig = OreConfig(true, 3)
-    val deepslate_silver_ore: OreConfig = OreConfig(true, 3)
+    val deepslate_tin_ore: OreConfig = OreConfig(true, 3, 5)
+    val deepslate_lead_ore: OreConfig = OreConfig(true, 1, 3)
+    val deepslate_silver_ore: OreConfig = OreConfig(true, 1, 3)
 }
 
 class Planets {

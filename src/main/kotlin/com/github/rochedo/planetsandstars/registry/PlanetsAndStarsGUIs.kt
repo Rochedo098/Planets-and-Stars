@@ -5,6 +5,8 @@ import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.Alloy
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.CompressorEntity
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.CrusherEntity
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.rockets.RocketMK1Entity
+import com.github.rochedo.planetsandstars.registry.blocks.entitys.rockets.RocketMK2Entity
+import com.github.rochedo.planetsandstars.registry.blocks.entitys.rockets.RocketMK3Entity
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.tables.RockAnalyzerEntity
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
 import net.fabricmc.fabric.api.`object`.builder.v1.block.entity.FabricBlockEntityTypeBuilder
@@ -32,6 +34,14 @@ object PlanetsAndStarsGUIs {
     // Rocket MK1
     var ROCKET_MK1_ENTITY: BlockEntityType<RocketMK1Entity>? = null
     var ROCKET_MK1_HANDLER_TYPE: ScreenHandlerType<RocketMK1GUI>? = null
+
+    // Rocket MK2
+    var ROCKET_MK2_ENTITY: BlockEntityType<RocketMK2Entity>? = null
+    var ROCKET_MK2_HANDLER_TYPE: ScreenHandlerType<RocketMK2GUI>? = null
+
+    // Rocket MK3
+    var ROCKET_MK3_ENTITY: BlockEntityType<RocketMK3Entity>? = null
+    var ROCKET_MK3_HANDLER_TYPE: ScreenHandlerType<RocketMK3GUI>? = null
 
     // Rock Analyzer
     var ROCK_ANALYZER_ENTITY: BlockEntityType<RockAnalyzerEntity>? = null
@@ -96,6 +106,36 @@ object PlanetsAndStarsGUIs {
             SimpleClientHandlerFactory { syncId: Int, inventory: PlayerInventory? ->
                 RocketMK1GUI(
                     ROCKET_MK1_HANDLER_TYPE,
+                    syncId,
+                    inventory,
+                    ScreenHandlerContext.EMPTY
+                )
+            }
+        )
+
+        ROCKET_MK2_ENTITY = FabricBlockEntityTypeBuilder.create(::RocketMK2Entity, PlanetsAndStarsBlocks.ROCKET_MK2).build(null)
+        Registry.register(Registry.BLOCK_ENTITY_TYPE, MyIdentifier("rocket_mk2"), ROCKET_MK2_ENTITY)
+
+        ROCKET_MK2_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(
+            MyIdentifier("rocket_mk2_gui"),
+            SimpleClientHandlerFactory { syncId: Int, inventory: PlayerInventory? ->
+                RocketMK2GUI(
+                    ROCKET_MK2_HANDLER_TYPE,
+                    syncId,
+                    inventory,
+                    ScreenHandlerContext.EMPTY
+                )
+            }
+        )
+
+        ROCKET_MK3_ENTITY = FabricBlockEntityTypeBuilder.create(::RocketMK3Entity, PlanetsAndStarsBlocks.ROCKET_MK3).build(null)
+        Registry.register(Registry.BLOCK_ENTITY_TYPE, MyIdentifier("rocket_mk3"), ROCKET_MK3_ENTITY)
+
+        ROCKET_MK3_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(
+            MyIdentifier("rocket_mk3_gui"),
+            SimpleClientHandlerFactory { syncId: Int, inventory: PlayerInventory? ->
+                RocketMK3GUI(
+                    ROCKET_MK3_HANDLER_TYPE,
                     syncId,
                     inventory,
                     ScreenHandlerContext.EMPTY

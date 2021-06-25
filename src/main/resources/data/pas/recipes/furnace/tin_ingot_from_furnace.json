@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "planetsandstars:raw_tin"
-  },
-  "result": "planetsandstars:tin_ingot",
-  "cookingtime": "200"
-}

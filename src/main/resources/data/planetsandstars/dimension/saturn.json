@@ -1,0 +1,25 @@
+{
+  "type": "planetsandstars:saturn_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "seed": 389952768,
+    "settings": {
+      "biome": "minecraft:the_void",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        },
+        {
+          "block": "planetsandstars:saturn_rock",
+          "height": 25
+        }
+      ],
+      "structures": {
+        "structures": {}
+      }
+    }
+  }
+}

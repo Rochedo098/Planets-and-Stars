@@ -29,6 +29,9 @@
       }
     ]
   },
+  "mixins": [
+    "pas.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.8.7",
     "fabric": "*",

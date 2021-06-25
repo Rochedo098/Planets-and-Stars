@@ -1,11 +1,9 @@
 package com.github.rochedo.planetsandstars.api.recipes
 
 import com.github.rochedo.planetsandstars.api.recipes.formats.ShapedRecipeFormat
-import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import net.minecraft.recipe.Recipe
 import java.io.File
 
 object PlanetsAndStarsRecipes {

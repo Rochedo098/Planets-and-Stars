@@ -4,11 +4,9 @@ import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
 import com.github.rochedo.planetsandstars.config.PlanetsAndStarsCustomPlanets
 import com.github.rochedo.planetsandstars.recipes.serializers.AlloySmelterRecipeSerializer
 import com.github.rochedo.planetsandstars.recipes.types.AlloySmelterRecipeType
-import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsBlocks
-import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsDimensions
-import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
-import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsItems
+import com.github.rochedo.planetsandstars.registry.*
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
+import com.github.rochedo.planetsandstars.utils.WorldGeneration
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import net.minecraft.item.ItemGroup
@@ -27,8 +25,10 @@ object PlanetsAndStars : ModInitializer {
         // Register All Things
         PlanetsAndStarsBlocks.register()
         PlanetsAndStarsDimensions.register()
+        PlanetsAndStarsFluids.register()
         PlanetsAndStarsGUIs.register()
         PlanetsAndStarsItems.register()
+        WorldGeneration.register()
 
         // Register Recipes
         val machinesConfig = PlanetsAndStarsConfigs.machines

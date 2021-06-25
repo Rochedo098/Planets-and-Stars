@@ -1,0 +1,68 @@
+{
+  "itemGroup.planetsandstars.general_group": "Planets And Stars",
+  "item.planetsandstars.guide_book": "Planets and Stars Guide Book",
+
+  "item.planetsandstars.tin_ingot": "Tin Ingot",
+  "item.planetsandstars.lead_ingot": "Lead Ingot",
+  "item.planetsandstars.silver_ingot": "Silver Ingot",
+  "item.planetsandstars.steel_ingot": "Steel Ingot",
+  "item.planetsandstars.silicon": "Silicon",
+
+  "item.planetsandstars.basic_circuit": "Basic Circuit",
+  "item.planetsandstars.advanced_circuit": "Advanced Circuit",
+  "item.planetsandstars.industrial_circuit": "Industrial Circuit",
+
+  "item.planetsandstars.basic_battery": "Basic Battery",
+  "item.planetsandstars.advanced_battery": "Advanced Battery",
+  "item.planetsandstars.industrial_battery": "Industrial Battery",
+
+  "item.planetsandstars.space_suit_helmet": "Space Suit Helmet",
+  "item.planetsandstars.space_suit_chestplate": "Space Suit Chestplate",
+  "item.planetsandstars.space_suit_leggings": "Space Suit Leggings",
+  "item.planetsandstars.space_suit_boots": "Space Suit Boots",
+
+  "item.planetsandstars.thermal_suit_helmet": "Thermal Suit Helmet",
+  "item.planetsandstars.thermal_suit_chestplate": "Thermal Suit Chestplate",
+  "item.planetsandstars.thermal_suit_leggings": "Thermal Suit Leggings",
+  "item.planetsandstars.thermal_suit_boots": "Thermal Suit Boots",
+
+  "item.planetsandstars.oxygen_tank": "Oxygen Tank",
+
+  "item.planetsandstars.raw_tin": "Raw Tin",
+  "item.planetsandstars.raw_lead": "Raw Lead",
+  "item.planetsandstars.raw_silver": "Raw Silver",
+
+  "block.planetsandstars.tin_ore": "Tin Ore",
+  "block.planetsandstars.lead_ore": "Lead Ore",
+  "block.planetsandstars.silver_ore": "Silver Ore",
+
+  "block.planetsandstars.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.planetsandstars.deepslate_lead_ore": "Deepslate Lead Ore",
+  "block.planetsandstars.deepslate_silver_ore": "Deepslate Silver Ore",
+
+  "block.planetsandstars.tin_block": "Tin Block",
+  "block.planetsandstars.lead_block": "Lead Block",
+  "block.planetsandstars.silver_block": "Silver Block",
+  "block.planetsandstars.steel_block": "Steel Block",
+
+  "block.planetsandstars.alloy_smelter": "Alloy Smelter",
+  "block.planetsandstars.crusher": "Crusher",
+  "block.planetsandstars.compressor": "Compressor",
+  "block.planetsandstars.rocket_mk1": "Rocket MK1",
+  "block.planetsandstars.rocket_mk2": "Rocket MK2",
+  "block.planetsandstars.rocket_mk3": "Rocket MK3",
+  "block.planetsandstars.machine_frame": "Machine Frame",
+  "block.planetsandstars.rock_analyzer": "Rock Analyzer",
+
+  "block.planetsandstars.mercury_rock": "Mercury Rock",
+  "block.planetsandstars.venus_rock": "Venus Rock",
+  "block.planetsandstars.mars_rock": "Mars Rock",
+  "block.planetsandstars.jupiter_rock": "Jupiter Rock",
+  "block.planetsandstars.saturn_rock": "Saturn Rock",
+  "block.planetsandstars.uranus_rock": "Uranus Rock",
+  "block.planetsandstars.neptune_rock": "Neptune Rock",
+
+  "category.planetsandstars.general_group": "Planets and Stars",
+  "ket.planetsandstars.dark_helmet_down": "Dark Helmet Down",
+  "key.planetsandstars.dark_helmet_up": "Dark Helmet Up"
+}

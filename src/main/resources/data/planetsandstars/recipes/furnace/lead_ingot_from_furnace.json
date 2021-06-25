@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "planetsandstars:raw_lead"
+  },
+  "result": "planetsandstars:lead_ingot",
+  "cookingtime": 200
+}
