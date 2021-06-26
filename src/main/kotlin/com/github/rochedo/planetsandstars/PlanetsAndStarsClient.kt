@@ -1,7 +1,12 @@
 package com.github.rochedo.planetsandstars
 
 import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
-import com.github.rochedo.planetsandstars.gui.*
+import com.github.rochedo.planetsandstars.gui.machines.AlloySmelterGUI
+import com.github.rochedo.planetsandstars.gui.machines.CompressorGUI
+import com.github.rochedo.planetsandstars.gui.machines.CrusherGUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK1GUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK2GUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK3GUI
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
 import io.github.cottonmc.cotton.gui.client.CottonInventoryScreen
 import net.fabricmc.api.ClientModInitializer

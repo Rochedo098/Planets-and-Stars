@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.github.rochedo.planetsandstars.mixins",
+  "package": "com.github.rochedo.planetsandstars.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
 

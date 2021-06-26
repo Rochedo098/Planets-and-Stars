@@ -1,4 +1,4 @@
-package com.github.rochedo.planetsandstars.gui
+package com.github.rochedo.planetsandstars.gui.tables
 
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription
 import io.github.cottonmc.cotton.gui.widget.WGridPanel
@@ -7,7 +7,7 @@ import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.screen.ScreenHandlerContext
 import net.minecraft.screen.ScreenHandlerType
 
-class RocketMK2GUI (
+class RockAnalyzerGUI(
     type: ScreenHandlerType<*>?,
     syncId: Int,
     playerInventory: PlayerInventory?,
@@ -25,7 +25,7 @@ class RocketMK2GUI (
         val slot1 = WItemSlot.of(blockInventory, 0, 1, 1)
         root.add(slot1, 8, 3, 8, 8)
 
-        root.add(this.createPlayerInventoryPanel(), 1, 1)
+        root.add(this.createPlayerInventoryPanel(), 0, 1)
         root.validate(this)
     }
 }

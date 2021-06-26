@@ -1,4 +1,4 @@
-package com.github.rochedo.planetsandstars.gui
+package com.github.rochedo.planetsandstars.gui.rockets
 
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription
 import io.github.cottonmc.cotton.gui.widget.WGridPanel
@@ -7,7 +7,7 @@ import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.screen.ScreenHandlerContext
 import net.minecraft.screen.ScreenHandlerType
 
-class RocketMK3GUI (
+class RocketMK1GUI (
     type: ScreenHandlerType<*>?,
     syncId: Int,
     playerInventory: PlayerInventory?,

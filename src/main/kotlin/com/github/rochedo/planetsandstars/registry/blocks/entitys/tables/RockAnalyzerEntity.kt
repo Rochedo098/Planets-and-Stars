@@ -1,7 +1,7 @@
 package com.github.rochedo.planetsandstars.registry.blocks.entitys.tables
 
 import com.github.rochedo.planetsandstars.api.ImplementedInventory
-import com.github.rochedo.planetsandstars.gui.RockAnalyzerGUI
+import com.github.rochedo.planetsandstars.gui.tables.RockAnalyzerGUI
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity

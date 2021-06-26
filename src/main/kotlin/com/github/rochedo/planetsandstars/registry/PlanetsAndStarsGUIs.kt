@@ -1,6 +1,12 @@
 package com.github.rochedo.planetsandstars.registry
 
-import com.github.rochedo.planetsandstars.gui.*
+import com.github.rochedo.planetsandstars.gui.machines.AlloySmelterGUI
+import com.github.rochedo.planetsandstars.gui.machines.CompressorGUI
+import com.github.rochedo.planetsandstars.gui.machines.CrusherGUI
+import com.github.rochedo.planetsandstars.gui.tables.RockAnalyzerGUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK1GUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK2GUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK3GUI
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.AlloySmelterEntity
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.CompressorEntity
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.CrusherEntity

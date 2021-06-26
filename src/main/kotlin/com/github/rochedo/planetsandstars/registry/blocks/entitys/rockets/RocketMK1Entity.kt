@@ -1,7 +1,7 @@
 package com.github.rochedo.planetsandstars.registry.blocks.entitys.rockets
 
 import com.github.rochedo.planetsandstars.api.ImplementedInventory
-import com.github.rochedo.planetsandstars.gui.RocketMK1GUI
+import com.github.rochedo.planetsandstars.gui.rockets.RocketMK1GUI
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
