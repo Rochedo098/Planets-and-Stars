@@ -57,6 +57,7 @@ repositories {
     }
     
     // Trinkets
+    /*
     maven {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
@@ -66,6 +67,7 @@ repositories {
         name = "Ladysnake Libs"
         url = "https://ladysnake.jfrog.io/artifactory/mods"
     }
+    */
 }
 
 dependencies {
@@ -80,10 +82,10 @@ dependencies {
 
     // Mod API's
     modImplementation include("io.github.cottonmc:LibGui:${project.libgui_version}") //LibGUI
-    modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}" // Patchouli
+    modImplementation include("vazkii.patchouli:Patchouli:${project.patchouli_version}") // Patchouli
     modApi include("dev.technici4n:FastTransferLib:${project.ftl_version}") // FTL
     modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
-    modImplementation "dev.emi:trinkets:${trinkets_version}"
+    //modImplementation "dev.emi:trinkets:${trinkets_version}"
 }
 
 processResources {

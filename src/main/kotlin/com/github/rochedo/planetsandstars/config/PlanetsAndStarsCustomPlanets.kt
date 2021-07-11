@@ -2,7 +2,7 @@ package com.github.rochedo.planetsandstars.config
 
 import com.github.rochedo.planetsandstars.config.customplanets.Atmosphere
 import com.github.rochedo.planetsandstars.config.customplanets.CustomPlanet
-import com.github.rochedo.planetsandstars.config.customplanets.Polution
+import com.github.rochedo.planetsandstars.config.customplanets.Pollution
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
@@ -12,7 +12,7 @@ import java.io.File
 object PlanetsAndStarsCustomPlanets {
     private val gson = GsonBuilder().setPrettyPrinting().create()
 
-    lateinit var basePlanet: BasePlanet
+    var basePlanet: BasePlanet = BasePlanet()
 
     private fun generateBase(file: String, write: Any) {
         val folder = File(FabricLoader.getInstance().configDir.toFile(), "planetsandstars/customplanets")
@@ -31,12 +31,11 @@ object PlanetsAndStarsCustomPlanets {
     }
 
     init {
-        basePlanet = BasePlanet()
 
         generateBase("base_planet.json", basePlanet)
     }
 }
 
 class BasePlanet {
-    val base_planet: CustomPlanet = CustomPlanet(false, "minecraft:cobblestone", arrayOf("null"), Atmosphere(true, 20, Polution(10, 10, 10, 10, 10, 10), true, "normal"))
+    val base_planet: CustomPlanet = CustomPlanet(false, "minecraft:cobblestone", arrayOf("null"), Atmosphere(true, 20, Pollution(10, 10, 10, 10, 10, 10), true, "normal"))
 }

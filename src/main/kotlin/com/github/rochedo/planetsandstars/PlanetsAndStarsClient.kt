@@ -43,7 +43,7 @@ object PlanetsAndStarsClient: ClientModInitializer {
         )
 
         val machinesConfig = PlanetsAndStarsConfigs.machines
-        if (machinesConfig.alloy_smelter.active) {
+        if (machinesConfig.alloySmelter.active) {
             ScreenRegistry.register<AlloySmelterGUI, CottonInventoryScreen<AlloySmelterGUI>>(
                 PlanetsAndStarsGUIs.ALLOY_SMELTER_HANDLER_TYPE,
                 ScreenRegistry.Factory<AlloySmelterGUI, CottonInventoryScreen<AlloySmelterGUI>> { desc: AlloySmelterGUI, inventory: PlayerInventory, title: Text? ->
@@ -82,7 +82,7 @@ object PlanetsAndStarsClient: ClientModInitializer {
             )
         }
 
-        if (machinesConfig.rocket_mk1.active) {
+        if (machinesConfig.rocketMk1.active) {
             ScreenRegistry.register<RocketMK1GUI, CottonInventoryScreen<RocketMK1GUI>>(
                 PlanetsAndStarsGUIs.ROCKET_MK1_HANDLER_TYPE,
                 ScreenRegistry.Factory<RocketMK1GUI, CottonInventoryScreen<RocketMK1GUI>> { desc: RocketMK1GUI, inventory: PlayerInventory, title: Text? ->
@@ -95,7 +95,7 @@ object PlanetsAndStarsClient: ClientModInitializer {
             )
         }
 
-        if (machinesConfig.rocket_mk2.active) {
+        if (machinesConfig.rocketMk2.active) {
             ScreenRegistry.register<RocketMK2GUI, CottonInventoryScreen<RocketMK2GUI>>(
                 PlanetsAndStarsGUIs.ROCKET_MK2_HANDLER_TYPE,
                 ScreenRegistry.Factory<RocketMK2GUI, CottonInventoryScreen<RocketMK2GUI>> { desc: RocketMK2GUI, inventory: PlayerInventory, title: Text? ->
@@ -108,7 +108,7 @@ object PlanetsAndStarsClient: ClientModInitializer {
             )
         }
 
-        if (machinesConfig.rocket_mk3.active) {
+        if (machinesConfig.rocketMk3.active) {
             ScreenRegistry.register<RocketMK3GUI, CottonInventoryScreen<RocketMK3GUI>>(
                 PlanetsAndStarsGUIs.ROCKET_MK3_HANDLER_TYPE,
                 ScreenRegistry.Factory<RocketMK3GUI, CottonInventoryScreen<RocketMK3GUI>> { desc: RocketMK3GUI, inventory: PlayerInventory, title: Text? ->

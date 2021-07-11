@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "planetsandstars:block/rocket_mk2",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "planetsandstars:block/rocket_mk2"
+    },
+    "facing=south": {
+      "model": "planetsandstars:block/rocket_mk2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "planetsandstars:block/rocket_mk2",
+      "y": 270
+    }
+  }
+}

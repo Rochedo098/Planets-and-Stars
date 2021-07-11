@@ -58,11 +58,11 @@ class AlloySmelterRecipe (
     }
 
     override fun getSerializer(): RecipeSerializer<*> {
-        return AlloySmelterRecipeSerializer().INSTANCE
+        return AlloySmelterRecipeSerializer.INSTANCE
     }
 
     override fun getType(): RecipeType<*> {
-        return AlloySmelterRecipeType().INSTANCE
+        return AlloySmelterRecipeType.INSTANCE
     }
 
     class Format (

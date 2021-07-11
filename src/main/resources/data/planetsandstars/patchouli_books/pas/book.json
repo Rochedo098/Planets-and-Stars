@@ -3,6 +3,7 @@
   "landing_text": "The guide book for your exploration on space",
   "version": 1,
   "advancements_namespaces": [ "planetsandstars" ],
+  "dont_generate_book": true,
   "creative_tab": "planetsandstars.general_group",
   "custom_book_item": "planetsandstars:guide_book",
   "show_progress": true

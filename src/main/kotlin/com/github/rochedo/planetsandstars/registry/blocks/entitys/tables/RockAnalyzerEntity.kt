@@ -1,7 +1,7 @@
 package com.github.rochedo.planetsandstars.registry.blocks.entitys.tables
 
-import com.github.rochedo.planetsandstars.api.ImplementedInventory
 import com.github.rochedo.planetsandstars.gui.tables.RockAnalyzerGUI
+import com.github.rochedo.planetsandstars.javapi.ImplementedInventory
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
@@ -22,7 +22,7 @@ class RockAnalyzerEntity(pos: BlockPos?, state: BlockState?) : BlockEntity(Plane
         return items
     }
 
-    override fun createMenu(syncId: Int, inv: PlayerInventory?, player: PlayerEntity?): ScreenHandler? {
+    override fun createMenu(syncId: Int, inv: PlayerInventory?, player: PlayerEntity?): ScreenHandler {
         return RockAnalyzerGUI(
             PlanetsAndStarsGUIs.ROCK_ANALYZER_HANDLER_TYPE,
             syncId,

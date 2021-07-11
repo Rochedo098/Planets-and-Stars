@@ -19,11 +19,14 @@ class AlloySmelterGUI(
         setRootPanel(root)
         root.setSize(128, 128)
 
-        val slot = WItemSlot.of(blockInventory, 0, 2, 1)
+        val slot = WItemSlot.of(blockInventory, 0, 1, 1)
         root.add(slot, 4, 3, 8, 8)
 
         val slot1 = WItemSlot.of(blockInventory, 0, 1, 1)
         root.add(slot1, 8, 3, 8, 8)
+
+        val slot2 = WItemSlot.of(blockInventory, 0, 1, 1)
+        root.add(slot2, 8, 3, 8, 8)
 
         root.add(this.createPlayerInventoryPanel(), 0, 1)
         root.validate(this)

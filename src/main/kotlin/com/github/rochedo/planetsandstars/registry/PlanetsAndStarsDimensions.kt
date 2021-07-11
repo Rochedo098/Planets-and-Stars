@@ -1,6 +1,7 @@
 package com.github.rochedo.planetsandstars.registry
 
 import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
+import com.github.rochedo.planetsandstars.registry.dimensions.moons.EarthMoonChunkGenerator
 import com.github.rochedo.planetsandstars.registry.dimensions.planets.*
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
 import com.mojang.serialization.Codec
@@ -49,6 +50,11 @@ object PlanetsAndStarsDimensions {
         MyIdentifier("neptune")
     )
 
+    val MOON_DIMENSION_KEY: RegistryKey<DimensionOptions> = RegistryKey.of(
+        Registry.DIMENSION_KEY,
+        MyIdentifier("moon")
+    )
+
     // World Keys
     val MERCURY_WORLD_KEY: RegistryKey<World> = RegistryKey.of(
         Registry.WORLD_KEY,
@@ -85,6 +91,11 @@ object PlanetsAndStarsDimensions {
         NEPTUNE_DIMENSION_KEY.value
     )
 
+    val MOON_WORLD_KEY: RegistryKey<World> = RegistryKey.of(
+        Registry.WORLD_KEY,
+        MOON_DIMENSION_KEY.value
+    )
+
     // Dimensions Keys Types
     val MERCURY_DIMENSION_KEY_TYPE: RegistryKey<DimensionType> = RegistryKey.of(
         Registry.DIMENSION_TYPE_KEY,
@@ -119,6 +130,11 @@ object PlanetsAndStarsDimensions {
     val NEPTUNE_DIMENSION_KEY_TYPE: RegistryKey<DimensionType> = RegistryKey.of(
         Registry.DIMENSION_TYPE_KEY,
         MyIdentifier("neptune_type")
+    )
+
+    val MOON_DIMENSION_KEY_TYPE: RegistryKey<DimensionType> = RegistryKey.of(
+        Registry.DIMENSION_TYPE_KEY,
+        MyIdentifier("moon_type")
     )
 
     fun register() {
@@ -162,6 +178,12 @@ object PlanetsAndStarsDimensions {
         if (planetsConfig.neptune.active) {
             Registry.register<Codec<out ChunkGenerator>, Codec<out ChunkGenerator>>(
                 Registry.CHUNK_GENERATOR, MyIdentifier("neptune"), NeptuneChunkGenerator.CODEC
+            )
+        }
+
+        if (planetsConfig.moon.active) {
+            Registry.register<Codec<out ChunkGenerator>, Codec<out ChunkGenerator>>(
+                Registry.CHUNK_GENERATOR, MyIdentifier("moon"), EarthMoonChunkGenerator.CODEC
             )
         }
     }

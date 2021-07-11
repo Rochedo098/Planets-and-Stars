@@ -29,22 +29,5 @@ object PlanetsAndStars : ModInitializer {
         PlanetsAndStarsGUIs.register()
         PlanetsAndStarsItems.register()
         WorldGeneration.register()
-
-        // Register Recipes
-        val machinesConfig = PlanetsAndStarsConfigs.machines
-        if (machinesConfig.alloy_smelter.active) {
-            Registry.register(Registry.RECIPE_SERIALIZER, AlloySmelterRecipeSerializer().ID, AlloySmelterRecipeSerializer().INSTANCE)
-            Registry.register(Registry.RECIPE_TYPE, MyIdentifier(AlloySmelterRecipeType().ID), AlloySmelterRecipeType().INSTANCE)
-        }
-
-        if (machinesConfig.crusher.active) {
-            Registry.register(Registry.RECIPE_SERIALIZER, AlloySmelterRecipeSerializer().ID, AlloySmelterRecipeSerializer().INSTANCE)
-            Registry.register(Registry.RECIPE_TYPE, MyIdentifier(AlloySmelterRecipeType().ID), AlloySmelterRecipeType().INSTANCE)
-        }
-
-        if (machinesConfig.compressor.active) {
-            Registry.register(Registry.RECIPE_SERIALIZER, AlloySmelterRecipeSerializer().ID, AlloySmelterRecipeSerializer().INSTANCE)
-            Registry.register(Registry.RECIPE_TYPE, MyIdentifier(AlloySmelterRecipeType().ID), AlloySmelterRecipeType().INSTANCE)
-        }
     }
 }

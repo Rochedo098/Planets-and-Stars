@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "planetsandstars:block/compressor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "planetsandstars:block/compressor"
+    },
+    "facing=south": {
+      "model": "planetsandstars:block/compressor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "planetsandstars:block/compressor",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "planetsandstars:alloy_smelter_recipe",
+  "inputA": {
+    "item": "minecraft:iron_ingot"
+  },
+  "inputB": {
+    "item": "minecraft:coal"
+  },
+  "outputItem": "planetsandstars:steel_ingot",
+  "outputAmount": 2
+}

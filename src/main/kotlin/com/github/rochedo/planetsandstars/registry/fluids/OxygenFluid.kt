@@ -11,27 +11,19 @@ import net.minecraft.state.property.Properties
 
 abstract class OxygenFluid : AbstractOxygenFluid() {
     override fun getStill(): Fluid {
-        return PlanetsAndStarsFluids.STILL_OXYGEN!!
+        return PlanetsAndStarsFluids.STILL_OXYGEN
     }
 
     override fun getFlowing(): Fluid {
-        return PlanetsAndStarsFluids.FLOWING_OXYGEN!!
+        return PlanetsAndStarsFluids.FLOWING_OXYGEN
     }
 
     override fun getBucketItem(): Item {
-        return PlanetsAndStarsFluids.OXYGEN_BUCKET!!
+        return PlanetsAndStarsFluids.OXYGEN_BUCKET
     }
 
-    override fun toBlockState(state: FluidState?): BlockState {
-        return PlanetsAndStarsFluids.OXYGEN!!.defaultState.with(Properties.LEVEL_15, getBlockStateLevel(state))
-    }
-
-    override fun isStill(state: FluidState?): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun isInfinite(): Boolean {
-        return false
+    override fun toBlockState(state: FluidState): BlockState {
+        return PlanetsAndStarsFluids.OXYGEN.defaultState.with(Properties.LEVEL_15, getBlockStateLevel(state))
     }
 
     class Flowing : OxygenFluid() {

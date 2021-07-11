@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
 class AlloySmelterRecipeSerializer : RecipeSerializer<AlloySmelterRecipe> {
-    val INSTANCE: AlloySmelterRecipeSerializer = AlloySmelterRecipeSerializer()
     val ID: Identifier = MyIdentifier("alloy_smelter_recipe")
 
     override fun read(id: Identifier, json: JsonObject): AlloySmelterRecipe {
@@ -35,5 +34,9 @@ class AlloySmelterRecipeSerializer : RecipeSerializer<AlloySmelterRecipe> {
         val inputB: Ingredient = Ingredient.fromPacket(buf)
         val output: ItemStack = buf.readItemStack()
         return AlloySmelterRecipe(inputA, inputB, output, id)
+    }
+
+    companion object {
+        val INSTANCE: AlloySmelterRecipeSerializer = AlloySmelterRecipeSerializer()
     }
 }

@@ -2,6 +2,7 @@ package com.github.rochedo.planetsandstars.registry
 
 import com.github.rochedo.planetsandstars.config.PlanetsAndStarsConfigs
 import com.github.rochedo.planetsandstars.registry.items.BatteryItem
+import com.github.rochedo.planetsandstars.registry.items.ElectricDrill
 import com.github.rochedo.planetsandstars.registry.items.OxygenTank
 import com.github.rochedo.planetsandstars.registry.materials.armor.SpaceSuitMaterial
 import com.github.rochedo.planetsandstars.utils.MyIdentifier
@@ -36,7 +37,7 @@ object PlanetsAndStarsItems {
     val INDUSTRIAL_BATTERY: Item = BatteryItem(99999.9, 0.0, true, true)
 
     // Guide
-    val GUIDE: Item = Item(PasItemSettings())
+    val GUIDE: Item = Item(PasItemSettings().maxCount(1))
 
     // Armors
     val SPACE_SUIT_MATERIAL: ArmorMaterial = SpaceSuitMaterial()
@@ -45,13 +46,13 @@ object PlanetsAndStarsItems {
     val SPACE_SUIT_LEGGINGS: Item = ArmorItem(SPACE_SUIT_MATERIAL, EquipmentSlot.LEGS, PasItemSettings())
     val SPACE_SUIT_BOOTS: Item = ArmorItem(SPACE_SUIT_MATERIAL, EquipmentSlot.FEET, PasItemSettings())
 
-    val THERMAL_SUIT_MATERIAL: ArmorMaterial = SpaceSuitMaterial()
-    val THERMAL_SUIT_HELMET: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.HEAD, PasItemSettings())
-    val THERMAL_SUIT_CHESTPLATE: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.CHEST, PasItemSettings())
-    val THERMAL_SUIT_LEGGINGS: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.LEGS, PasItemSettings())
-    val THERMAL_SUIT_BOOTS: Item = ArmorItem(THERMAL_SUIT_MATERIAL, EquipmentSlot.FEET, PasItemSettings())
-
     val OXYGEN_TANK: Item = OxygenTank()
+    val MINING_DRILL: Item = ElectricDrill(4999.9, 0.0, true, true)
+
+    // Dehydrated Foods
+    val DEHYDRATED_APPLE: Item = Item(PasItemSettings())
+    val DEHYDRATED_CARROT: Item = Item(PasItemSettings())
+    val DEHYDRATED_POTATO: Item = Item(PasItemSettings())
 
     fun register() {
         Registry.register(Registry.ITEM, MyIdentifier("tin_ingot"), TIN_INGOT)
@@ -76,20 +77,18 @@ object PlanetsAndStarsItems {
 
         // Armors
         val armorConfig = PlanetsAndStarsConfigs.atmosphere
-        if (armorConfig.space_suit.active) {
+        if (armorConfig.spaceSuit.active) {
             Registry.register(Registry.ITEM, MyIdentifier("space_suit_helmet"), SPACE_SUIT_HELMET)
             Registry.register(Registry.ITEM, MyIdentifier("space_suit_chestplate"), SPACE_SUIT_CHESTPLATE)
             Registry.register(Registry.ITEM, MyIdentifier("space_suit_leggings"), SPACE_SUIT_LEGGINGS)
             Registry.register(Registry.ITEM, MyIdentifier("space_suit_boots"), SPACE_SUIT_BOOTS)
         }
 
-        if (armorConfig.thermal_suit.active) {
-            Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_helmet"), THERMAL_SUIT_HELMET)
-            Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_chestplate"), THERMAL_SUIT_CHESTPLATE)
-            Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_leggings"), THERMAL_SUIT_LEGGINGS)
-            Registry.register(Registry.ITEM, MyIdentifier("thermal_suit_boots"), THERMAL_SUIT_BOOTS)
-        }
-
         Registry.register(Registry.ITEM, MyIdentifier("oxygen_tank"), OXYGEN_TANK)
+        Registry.register(Registry.ITEM, MyIdentifier("mining_drill"), MINING_DRILL)
+
+        Registry.register(Registry.ITEM, MyIdentifier("dehydrated_apple"), DEHYDRATED_APPLE)
+        Registry.register(Registry.ITEM, MyIdentifier("dehydrated_carrot"), DEHYDRATED_CARROT)
+        Registry.register(Registry.ITEM, MyIdentifier("dehydrated_potato"), DEHYDRATED_POTATO)
     }
 }

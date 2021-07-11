@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "planetsandstars:block/crusher",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "planetsandstars:block/crusher"
+    },
+    "facing=south": {
+      "model": "planetsandstars:block/crusher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "planetsandstars:block/crusher",
+      "y": 270
+    }
+  }
+}

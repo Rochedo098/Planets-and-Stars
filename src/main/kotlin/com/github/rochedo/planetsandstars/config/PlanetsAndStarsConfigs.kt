@@ -1,6 +1,6 @@
 package com.github.rochedo.planetsandstars.config
 
-import com.github.rochedo.planetsandstars.config.customplanets.Polution
+import com.github.rochedo.planetsandstars.config.customplanets.Pollution
 import com.github.rochedo.planetsandstars.config.formats.*
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
@@ -11,10 +11,10 @@ import java.io.File
 object PlanetsAndStarsConfigs {
     private val gson = GsonBuilder().setPrettyPrinting().create()
 
-    lateinit var machines: Machines
-    lateinit var ores: Ores
-    lateinit var planets: Planets
-    lateinit var atmosphere: GeneralAtmosphere
+    var machines: Machines
+    var ores: Ores
+    var planets: Planets
+    var atmosphere: GeneralAtmosphere
 
     private fun generateConfigs(file: String, write: Any) {
         val folder = File(FabricLoader.getInstance().configDir.toFile(), "planetsandstars")
@@ -46,39 +46,40 @@ object PlanetsAndStarsConfigs {
 }
 
 class Machines {
-    val alloy_smelter: MachineConfig = MachineConfig(false, 1.0, 1.0)
-    val crusher: MachineConfig = MachineConfig(false, 1.0, 1.0)
-    val compressor: MachineConfig = MachineConfig(false, 1.0, 1.0)
+    val alloySmelter: MachineConfig = MachineConfig(true, 1.0, 1.0)
+    val crusher: MachineConfig = MachineConfig(true, 1.0, 1.0)
+    val compressor: MachineConfig = MachineConfig(true, 1.0, 1.0)
 
-    val rocket_mk1: MachineConfig = MachineConfig(true, 0.0, 0.0)
-    val rocket_mk2: MachineConfig = MachineConfig(true, 0.0, 0.0)
-    val rocket_mk3: MachineConfig = MachineConfig(true, 0.0, 0.0)
+    val rocketMk1: MachineConfig = MachineConfig(true, 0.0, 0.0)
+    val rocketMk2: MachineConfig = MachineConfig(true, 0.0, 0.0)
+    val rocketMk3: MachineConfig = MachineConfig(true, 0.0, 0.0)
 
-    val rock_analyzer: MachineConfig = MachineConfig(true, 1.0, 1.0)
+    val rockAnalyzer: MachineConfig = MachineConfig(true, 1.0, 1.0)
 }
 
 class Ores {
-    val tin_ore: OreConfig = OreConfig(true, 7, 10)
-    val lead_ore: OreConfig = OreConfig(true, 5, 7)
-    val silver_ore: OreConfig = OreConfig(true, 5, 7)
+    val tinOre: OreConfig = OreConfig(true, 7, 10)
+    val leadOre: OreConfig = OreConfig(true, 5, 7)
+    val silverOre: OreConfig = OreConfig(true, 5, 7)
 
-    val deepslate_tin_ore: OreConfig = OreConfig(true, 3, 5)
-    val deepslate_lead_ore: OreConfig = OreConfig(true, 1, 3)
-    val deepslate_silver_ore: OreConfig = OreConfig(true, 1, 3)
+    val deepslateTinOre: OreConfig = OreConfig(true, 3, 5)
+    val deepslateLeadOre: OreConfig = OreConfig(true, 1, 3)
+    val deepslateSilverOre: OreConfig = OreConfig(true, 1, 3)
 }
 
 class Planets {
-    val mercury: PlanetConfig = PlanetConfig(false, true)
-    val venus: PlanetConfig = PlanetConfig(false, true)
-    val mars: PlanetConfig = PlanetConfig(false, true)
-    val jupiter: PlanetConfig = PlanetConfig(false, true)
-    val saturn: PlanetConfig = PlanetConfig(false, true)
-    val uranus: PlanetConfig = PlanetConfig(false, true)
-    val neptune: PlanetConfig = PlanetConfig(false, true)
+    val mercury: PlanetConfig = PlanetConfig(true, true)
+    val venus: PlanetConfig = PlanetConfig(true, true)
+    val mars: PlanetConfig = PlanetConfig(true, true)
+    val jupiter: PlanetConfig = PlanetConfig(true, true)
+    val saturn: PlanetConfig = PlanetConfig(true, true)
+    val uranus: PlanetConfig = PlanetConfig(true, true)
+    val neptune: PlanetConfig = PlanetConfig(true, true)
+
+    val moon: PlanetConfig = PlanetConfig(true, true)
 }
 
 class GeneralAtmosphere {
-    val general_atmosphere: AtmosphereConfig = AtmosphereConfig(15, Polution(10, 10, 10,10, 10, 10))
-    val thermal_suit: AtmosphereArmorConfig = AtmosphereArmorConfig(true)
-    val space_suit: AtmosphereArmorConfig = AtmosphereArmorConfig(true)
+    val generalAtmosphere: AtmosphereConfig = AtmosphereConfig(15, Pollution(10, 10, 10,10, 10, 10))
+    val spaceSuit: AtmosphereArmorConfig = AtmosphereArmorConfig(true)
 }

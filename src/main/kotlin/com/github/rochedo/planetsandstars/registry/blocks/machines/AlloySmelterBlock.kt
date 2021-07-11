@@ -4,22 +4,35 @@ import com.github.rochedo.planetsandstars.recipes.AlloySmelterRecipe
 import com.github.rochedo.planetsandstars.recipes.types.AlloySmelterRecipeType
 import com.github.rochedo.planetsandstars.registry.blocks.entitys.machines.AlloySmelterEntity
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
-import net.minecraft.block.BlockRenderType
-import net.minecraft.block.BlockState
-import net.minecraft.block.BlockWithEntity
-import net.minecraft.block.Blocks
+import net.minecraft.block.*
 import net.minecraft.block.entity.BlockEntity
 import net.minecraft.entity.player.PlayerEntity
+import net.minecraft.item.ItemPlacementContext
 import net.minecraft.item.ItemStack
+import net.minecraft.state.StateManager
+import net.minecraft.state.property.Properties
 import net.minecraft.util.ActionResult
 import net.minecraft.util.Hand
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
+import net.minecraft.util.math.Direction
 import net.minecraft.world.World
 import java.util.*
 
 
-class AlloySmelterBlock : BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_BLOCK)) {
+class   AlloySmelterBlock : BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_BLOCK)) {
+    init {
+        defaultState = this.stateManager.defaultState.with(Properties.HORIZONTAL_FACING, Direction.NORTH)
+    }
+
+    override fun appendProperties(builder: StateManager.Builder<Block, BlockState>) {
+        builder.add(Properties.HORIZONTAL_FACING)
+    }
+
+    override fun getPlacementState(ctx: ItemPlacementContext): BlockState {
+        return this.defaultState.with(FACING, ctx.playerFacing.opposite)
+    }
+
     override fun onUse(
         state: BlockState,
         world: World,
@@ -40,16 +53,7 @@ class AlloySmelterBlock : BlockWithEntity(FabricBlockSettings.copy(Blocks.IRON_B
         return BlockRenderType.MODEL
     }
 
-    fun activate(state: BlockState, world: World, pos: BlockPos, player: PlayerEntity, hand: Hand, result: BlockHitResult): Boolean {
-        if (!world.isClient) {
-            val inventory: AlloySmelterEntity = AlloySmelterEntity(pos, state)
-            val match: Optional<AlloySmelterRecipe> = world.recipeManager.getFirstMatch(AlloySmelterRecipeType().INSTANCE, inventory, world)
-            if (match.isPresent) {
-                player.inventory.offerOrDrop(ItemStack.EMPTY);
-                player.getMainHandStack().decrement(1);
-                player.getOffHandStack().decrement(1);
-            }
-        }
-        return true
+    companion object {
+        val FACING = HorizontalFacingBlock.FACING
     }
 }

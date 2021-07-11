@@ -11,23 +11,19 @@ import net.minecraft.state.property.Properties
 
 abstract class HydrogenFluid : AbstractHydrogenFluid() {
     override fun getStill(): Fluid {
-        return PlanetsAndStarsFluids.STILL_HYDROGEN!!
+        return PlanetsAndStarsFluids.STILL_HYDROGEN
     }
 
     override fun getFlowing(): Fluid {
-        return PlanetsAndStarsFluids.FLOWING_HYDROGEN!!
+        return PlanetsAndStarsFluids.FLOWING_HYDROGEN
     }
 
     override fun getBucketItem(): Item {
-        return PlanetsAndStarsFluids.HYDROGEN_BUCKET!!
+        return PlanetsAndStarsFluids.HYDROGEN_BUCKET
     }
 
     override fun toBlockState(state: FluidState?): BlockState {
-        return PlanetsAndStarsFluids.HYDROGEN!!.defaultState.with(Properties.LEVEL_15, getBlockStateLevel(state))
-    }
-
-    override fun isStill(state: FluidState?): Boolean {
-        TODO("Not yet implemented")
+        return PlanetsAndStarsFluids.HYDROGEN.defaultState.with(Properties.LEVEL_15, getBlockStateLevel(state))
     }
 
     class FLowing : HydrogenFluid() {

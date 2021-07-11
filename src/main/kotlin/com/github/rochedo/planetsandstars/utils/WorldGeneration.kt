@@ -22,55 +22,55 @@ object WorldGeneration {
         .configure(OreFeatureConfig(
             OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
             PlanetsAndStarsBlocks.TIN_ORE.defaultState,
-            oresConfig.tin_ore.size
+            oresConfig.tinOre.size
         ))
         .range(RangeDecoratorConfig(
             UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))
         ))
         .spreadHorizontally()
-        .repeat(oresConfig.tin_ore.rarity)
+        .repeat(oresConfig.tinOre.rarity)
     //
 
     val LEAD_ORE_OVERWORLD: ConfiguredFeature<*, *> = Feature.ORE
         .configure(OreFeatureConfig(
             OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
             PlanetsAndStarsBlocks.LEAD_ORE.defaultState,
-            oresConfig.lead_ore.size
+            oresConfig.leadOre.size
         ))
         .range(RangeDecoratorConfig(
             UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))
         ))
         .spreadHorizontally()
-        .repeat(oresConfig.lead_ore.rarity)
+        .repeat(oresConfig.leadOre.rarity)
     //
 
     val SILVER_ORE_OVERWORLD: ConfiguredFeature<*, *> = Feature.ORE
         .configure(OreFeatureConfig(
             OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
             PlanetsAndStarsBlocks.SILVER_ORE.defaultState,
-            oresConfig.silver_ore.size
+            oresConfig.silverOre.size
         ))
         .range(RangeDecoratorConfig(
             UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64))
         ))
         .spreadHorizontally()
-        .repeat(oresConfig.silver_ore.rarity)
+        .repeat(oresConfig.silverOre.rarity)
     //
 
     fun register() {
-        if (oresConfig.tin_ore.active) {
+        if (oresConfig.tinOre.active) {
             val tinOreOverworld: RegistryKey<ConfiguredFeature<*, *>> = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, MyIdentifier("tin_ore_overworld"))
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tinOreOverworld.value, TIN_ORE_OVERWORLD)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinOreOverworld)
         }
 
-        if (oresConfig.lead_ore.active) {
+        if (oresConfig.leadOre.active) {
             val leadOreOverworld: RegistryKey<ConfiguredFeature<*, *>> = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, MyIdentifier("lead_ore_overworld"))
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, leadOreOverworld.value, LEAD_ORE_OVERWORLD)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, leadOreOverworld)
         }
 
-        if (oresConfig.silver_ore.active) {
+        if (oresConfig.silverOre.active) {
             val silverOreOverworld: RegistryKey<ConfiguredFeature<*, *>> = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, MyIdentifier("silver_ore_overworld"))
             Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, silverOreOverworld.value, SILVER_ORE_OVERWORLD)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, silverOreOverworld)

@@ -31,7 +31,7 @@ class SpaceSuitMaterial : ArmorMaterial {
     }
 
     override fun getName(): String {
-        return "space_suit"
+        return "space"
     }
 
     override fun getToughness(): Float {

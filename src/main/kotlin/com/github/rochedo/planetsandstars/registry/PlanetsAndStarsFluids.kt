@@ -15,25 +15,25 @@ import net.minecraft.item.Items
 import net.minecraft.util.registry.Registry
 
 object PlanetsAndStarsFluids {
-    var STILL_OXYGEN: FlowableFluid? = null
-    var FLOWING_OXYGEN: FlowableFluid? = null
-    var OXYGEN_BUCKET: Item? = null
-    var OXYGEN: Block? = null
+    var STILL_OXYGEN: FlowableFluid = OxygenFluid.Still()
+    var FLOWING_OXYGEN: FlowableFluid = OxygenFluid.Flowing()
+    var OXYGEN_BUCKET: Item = BucketItem(STILL_OXYGEN, FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1))
+    var OXYGEN: Block = object : FluidBlock(STILL_OXYGEN, FabricBlockSettings.of(Material.WATER)){}
 
-    var STILL_HYDROGEN: FlowableFluid? = null
-    var FLOWING_HYDROGEN: FlowableFluid? = null
-    var HYDROGEN_BUCKET: Item? = null
-    var HYDROGEN: Block? = null
+    var STILL_HYDROGEN: FlowableFluid = HydrogenFluid.Still()
+    var FLOWING_HYDROGEN: FlowableFluid = HydrogenFluid.FLowing()
+    var HYDROGEN_BUCKET: Item = BucketItem(STILL_HYDROGEN, FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1))
+    var HYDROGEN: Block = object : FluidBlock(STILL_HYDROGEN, FabricBlockSettings.of(Material.WATER)){}
 
     fun register() {
-        STILL_OXYGEN = Registry.register(Registry.FLUID, MyIdentifier("oxygen"), OxygenFluid.Still())
-        FLOWING_OXYGEN = Registry.register(Registry.FLUID, MyIdentifier("flowing_oxygen"), OxygenFluid.Flowing())
-        OXYGEN_BUCKET = Registry.register(Registry.ITEM, MyIdentifier("oxygen_bucket"), BucketItem(STILL_OXYGEN, FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)))
-        OXYGEN = Registry.register(Registry.BLOCK, MyIdentifier("oxygen"), object : FluidBlock(STILL_OXYGEN, FabricBlockSettings.of(Material.WATER)){})
+        Registry.register(Registry.FLUID, MyIdentifier("oxygen"), STILL_OXYGEN)
+        Registry.register(Registry.FLUID, MyIdentifier("flowing_oxygen"), FLOWING_OXYGEN)
+        Registry.register(Registry.ITEM, MyIdentifier("oxygen_bucket"), OXYGEN_BUCKET)
+        Registry.register(Registry.BLOCK, MyIdentifier("oxygen"), OXYGEN)
 
-        STILL_HYDROGEN = Registry.register(Registry.FLUID, MyIdentifier("hydrogen"), HydrogenFluid.Still())
-        FLOWING_HYDROGEN = Registry.register(Registry.FLUID, MyIdentifier("flowing_hydrogen"), HydrogenFluid.FLowing())
-        HYDROGEN_BUCKET = Registry.register(Registry.ITEM, MyIdentifier("hydrogen_bucket"), BucketItem(STILL_HYDROGEN, FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)))
-        HYDROGEN = Registry.register(Registry.BLOCK, MyIdentifier("hydrogen"), object : FluidBlock(STILL_HYDROGEN, FabricBlockSettings.of(Material.WATER)){})
+        Registry.register(Registry.FLUID, MyIdentifier("hydrogen"), STILL_HYDROGEN)
+        Registry.register(Registry.FLUID, MyIdentifier("flowing_hydrogen"), FLOWING_HYDROGEN)
+        Registry.register(Registry.ITEM, MyIdentifier("hydrogen_bucket"), HYDROGEN_BUCKET)
+        Registry.register(Registry.BLOCK, MyIdentifier("hydrogen"), HYDROGEN)
     }
 }

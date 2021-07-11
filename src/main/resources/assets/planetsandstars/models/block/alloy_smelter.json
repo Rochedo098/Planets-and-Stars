@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "planetsandstars:block/machine_frame",
+    "front": "planetsandstars:block/alloy_smelter_front",
+    "side": "planetsandstars:block/machine_frame"
+  }
+}

@@ -1,7 +1,7 @@
 package com.github.rochedo.planetsandstars.registry.blocks.entitys.rockets
 
-import com.github.rochedo.planetsandstars.api.ImplementedInventory
 import com.github.rochedo.planetsandstars.gui.rockets.RocketMK2GUI
+import com.github.rochedo.planetsandstars.javapi.ImplementedInventory
 import com.github.rochedo.planetsandstars.registry.PlanetsAndStarsGUIs
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
@@ -31,7 +31,7 @@ class RocketMK2Entity(pos: BlockPos?, state: BlockState?) : BlockEntity(PlanetsA
         return LiteralText("Rocket MK2")
     }
 
-    override fun createMenu(syncId: Int, inv: PlayerInventory?, player: PlayerEntity?): ScreenHandler? {
+    override fun createMenu(syncId: Int, inv: PlayerInventory?, player: PlayerEntity?): ScreenHandler {
         return RocketMK2GUI(
             PlanetsAndStarsGUIs.ROCKET_MK2_HANDLER_TYPE,
             syncId,

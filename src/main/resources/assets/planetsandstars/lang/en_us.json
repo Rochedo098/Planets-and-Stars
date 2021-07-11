@@ -27,10 +27,15 @@
   "item.planetsandstars.thermal_suit_boots": "Thermal Suit Boots",
 
   "item.planetsandstars.oxygen_tank": "Oxygen Tank",
+  "item.planetsandstars.mining_drill": "Mining Drill",
 
   "item.planetsandstars.raw_tin": "Raw Tin",
   "item.planetsandstars.raw_lead": "Raw Lead",
   "item.planetsandstars.raw_silver": "Raw Silver",
+
+  "item.planetsandstars.dehydrated_apple": "Dehydrated Apple",
+  "item.planetsandstars.dehydrated_carrot": "Dehydrated Carrot",
+  "item.planetsandstars.dehydrated_potato": "Dehydrated Potato",
 
   "block.planetsandstars.tin_ore": "Tin Ore",
   "block.planetsandstars.lead_ore": "Lead Ore",
@@ -62,7 +67,71 @@
   "block.planetsandstars.uranus_rock": "Uranus Rock",
   "block.planetsandstars.neptune_rock": "Neptune Rock",
 
+  "block.planetsandstars.moon_rock": "Moon Rock",
+
   "category.planetsandstars.general_group": "Planets and Stars",
-  "ket.planetsandstars.dark_helmet_down": "Dark Helmet Down",
-  "key.planetsandstars.dark_helmet_up": "Dark Helmet Up"
+  "key.planetsandstars.dark_helmet_down": "Tint Helmet Down",
+  "key.planetsandstars.dark_helmet_up": "Tint Helmet Up",
+
+  "button.planetsandstars.moon_button": "Talking to the Moon",
+  "button.planetsandstars.mercury_button": "Go to Mercury",
+  "button.planetsandstars.venus_button": "Go to Venus",
+
+  "button.planetsandstars.mars_button": "Go to Mars",
+  "button.planetsandstars.jupiter_button": "Go to Jupiter",
+
+  "button.planetsandstars.saturn_button": "Go to Saturn",
+  "button.planetsandstars.uranus_button": "Go to Uranus",
+  "button.planetsandstars.neptune_button": "Go to Neptune",
+
+  "advancements.planetsandstars.alloy_smelter": "Alloy Smelter",
+  "advancements.planetsandstars.alloy_smelter.description": "Make a Alloy Smelter machine",
+
+  "advancements.planetsandstars.compressor": "Compressor",
+  "advancements.planetsandstars.compressor.description": "Make a compressor",
+
+  "advancements.planetsandstars.crusher": "Crusher",
+  "advancements.planetsandstars.crusher.description": "Make a crusher",
+
+  "advancements.planetsandstars.getting_started": "Planets? Stars? Meteors?",
+  "advancements.planetsandstars.getting_started.description": "The start of all your exploration",
+
+  "advancements.planetsandstars.jupiter": "Jupiter Planet",
+  "advancements.planetsandstars.jupiter.description": "Enter on Jupiter atmosphere",
+
+  "advancements.planetsandstars.machine_frame": "Machine Frame",
+  "advancements.planetsandstars.machine_frame.description": "This is begging of all your machines",
+
+  "advancements.planetsandstars.mars": "The Red Planet",
+  "advancements.planetsandstars.mars.description": "Enter on Mars atmosphere",
+
+  "advancements.planetsandstars.mercury": "The Liquid Planet",
+  "advancements.planetsandstars.mercury.description": "Enter on Mercury atmosphere",
+
+  "advancements.planetsandstars.moon": "The Moon",
+  "advancements.planetsandstars.moon.description": "Land on the moon",
+
+  "advancements.planetsandstars.neptune": "Neptune Planet",
+  "advancements.planetsandstars.neptune.description": "Enter on the neptune atmosphere",
+
+  "advancements.planetsandstars.rocket_mk1": "The Start of Sky",
+  "advancements.planetsandstars.rocket_mk1.description": "Craft a rocket mk1",
+
+  "advancements.planetsandstars.rocket_mk2": "The next planets",
+  "advancements.planetsandstars.rocket_mk2.description": "Craft a rocket mk2",
+
+  "advancements.planetsandstars.rocket_mk3": "The big final planets",
+  "advancements.planetsandstars.rocket_mk3.description": "Craft a rocket mk3",
+
+  "advancements.planetsandstars.saturn": "The Saturn",
+  "advancements.planetsandstars.saturn.description": "Enter on saturn atmosphere",
+
+  "advancements.planetsandstars.space_suit": "Surviving on Space",
+  "advancements.planetsandstars.space_suit.description": "Craft and equip a space suit",
+
+  "advancements.planetsandstars.uranus": "The Uranus",
+  "advancements.planetsandstars.uranus.description": "Enter on uranus atmosphere",
+
+  "advancements.planetsandstars.venus": "The Venus",
+  "advancements.planetsandstars.venus.description": "Enter on venus atmosphere"
 }

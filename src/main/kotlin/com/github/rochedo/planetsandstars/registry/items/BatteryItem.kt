@@ -14,7 +14,7 @@ class BatteryItem(
     val actEnergy: Double,
     val insert: Boolean,
     val extract: Boolean
-) : Item(PasItemSettings()), EnergyIo {
+) : Item(PasItemSettings().maxCount(1)), EnergyIo {
     override fun getEnergyCapacity(): Double {
         return maxEnergy
     }

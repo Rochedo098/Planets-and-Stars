@@ -4,7 +4,7 @@
       "item": "planetsandstars:space_suit_chestplate"
     },
     "title": {
-      "translate": "advancements.planetsnadstars.space_suit"
+      "translate": "advancements.planetsandstars.space_suit"
     },
     "description": {
       "translate": "advancements.planetsandstars.space_suit.description"
@@ -18,9 +18,21 @@
         "items": [
           {
             "items": [
-              "planetsandstars:space_suit_helmet",
-              "planetsandstars:space_suit_chestplate",
-              "planetsandstars:space_suit_leggings",
+              "planetsandstars:space_suit_helmet"
+            ]
+          },
+          {
+            "items": [
+              "planetsandstars:space_suit_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "planetsandstars:space_suit_leggings"
+            ]
+          },
+          {
+            "items": [
               "planetsandstars:space_suit_boots"
             ]
           }

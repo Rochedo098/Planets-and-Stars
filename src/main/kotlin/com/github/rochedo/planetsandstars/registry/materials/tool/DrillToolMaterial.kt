@@ -5,7 +5,7 @@ import net.minecraft.recipe.Ingredient
 
 class DrillToolMaterial : ToolMaterial {
     override fun getDurability(): Int {
-        return 0
+        return -1
     }
 
     override fun getMiningSpeedMultiplier(): Float {

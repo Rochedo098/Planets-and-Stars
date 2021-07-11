@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "planetsandstars:block/rock_analyzer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "planetsandstars:block/rock_analyzer"
+    },
+    "facing=south": {
+      "model": "planetsandstars:block/rock_analyzer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "planetsandstars:block/rock_analyzer",
+      "y": 270
+    }
+  }
+}

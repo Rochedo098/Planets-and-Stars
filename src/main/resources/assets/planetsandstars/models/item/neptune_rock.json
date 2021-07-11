@@ -1,6 +1,3 @@
 {
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "planetsandstars:block/neptune_rock"
-  }
+  "parent": "planetsandstars:block/neptune_rock"
 }
