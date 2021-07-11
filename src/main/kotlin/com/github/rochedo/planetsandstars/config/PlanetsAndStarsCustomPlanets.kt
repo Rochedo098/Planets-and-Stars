@@ -7,8 +7,6 @@ import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
 
-// Based on https://github.com/GabrielOlvH/Industrial-Revolution/blob/893c64f2b50fc829555a49ed43ae4a906eeba552/src/main/kotlin/me/steven/indrev/config/IRConfig.kt
-
 object PlanetsAndStarsCustomPlanets {
     private val gson = GsonBuilder().setPrettyPrinting().create()
 
@@ -31,7 +29,6 @@ object PlanetsAndStarsCustomPlanets {
     }
 
     init {
-
         generateBase("base_planet.json", basePlanet)
     }
 }

@@ -2,14 +2,19 @@ package com.github.rochedo.planetsandstars.config
 
 import com.github.rochedo.planetsandstars.config.customplanets.Pollution
 import com.github.rochedo.planetsandstars.config.formats.*
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
-
-// Based on https://github.com/GabrielOlvH/Industrial-Revolution/blob/893c64f2b50fc829555a49ed43ae4a906eeba552/src/main/kotlin/me/steven/indrev/config/IRConfig.kt
+import java.io.FileReader
 
 object PlanetsAndStarsConfigs {
     private val gson = GsonBuilder().setPrettyPrinting().create()
+
+    var wmachines: Machines
+    var wores: Ores
+    var wplanets: Planets
+    var watmosphere: GeneralAtmosphere
 
     var machines: Machines
     var ores: Ores
@@ -33,15 +38,29 @@ object PlanetsAndStarsConfigs {
     }
 
     init {
-        machines = Machines()
-        ores = Ores()
-        planets = Planets()
-        atmosphere = GeneralAtmosphere()
+        val folder = File(FabricLoader.getInstance().configDir.toFile(), "planetsandstars")
 
-        generateConfigs("machines.json", machines)
-        generateConfigs("ores.json", ores)
-        generateConfigs("planets.json", planets)
-        generateConfigs("atmosphere.json", atmosphere)
+        wmachines = Machines()
+        wores = Ores()
+        wplanets = Planets()
+        watmosphere = GeneralAtmosphere()
+
+        if (folder.exists()) {
+            machines = Gson().fromJson(FileReader(folder.toString() + "/machines.json"), Machines::class.java)
+            ores = Gson().fromJson(FileReader(folder.toString() + "/ores.json"), Ores::class.java)
+            planets = Gson().fromJson(FileReader(folder.toString() + "/planets.json"), Planets::class.java)
+            atmosphere = Gson().fromJson(FileReader(folder.toString() + "/atmosphere.json"), GeneralAtmosphere::class.java)
+        } else {
+            machines = Machines()
+            ores = Ores()
+            planets = Planets()
+            atmosphere = GeneralAtmosphere()
+        }
+
+        generateConfigs("machines.json", wmachines)
+        generateConfigs("ores.json", wores)
+        generateConfigs("planets.json", wplanets)
+        generateConfigs("atmosphere.json", watmosphere)
     }
 }
 
